@@ -437,6 +437,8 @@ onMounted(() => {
     animation: tl4,
     // onLeave: () => tl4.pause(), 
     onEnter: () => tl4.play(), 
+    onEnterBack: () => tl4.reverse(), 
+
     
 
   });
