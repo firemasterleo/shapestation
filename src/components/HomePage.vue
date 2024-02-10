@@ -34,10 +34,15 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path d="M15.78 15.84S18.64 13 19.61 12c3.07-3 1.54-9.18 1.54-9.18S15 1.29 12 4.36C9.66 6.64 8.14 8.22 8.14 8.22S4.3 7.42 2 9.72L14.25 22c2.3-2.33 1.53-6.16 1.53-6.16zm-1.5-9a2 2 0 0 1 2.83 0 2 2 0 1 1-2.83 0zM3 21a7.81 7.81 0 0 0 5-2l-3-3c-2 1-2 5-2 5z"/></svg>
                 </div>
 
-                <div class="wind1" ref="wind1"></div>
-                <div class="wind2" ref="wind2"></div>
-                <div class="wind3" ref="wind3"></div>
-                <div class="wind4" ref="wind4"></div>
+                <div class="wind">
+
+                    <div class="wind1" ref="wind1"></div>
+                    <div class="wind2" ref="wind2"></div>
+                    <div class="wind3" ref="wind3"></div>
+                    <div class="wind4" ref="wind4"></div>
+
+                </div>
+
             </div>
 
             <h1>About Shapestation</h1>
@@ -124,7 +129,7 @@
     // border: solid;
 
     .image {
-        height: 34rem;
+        height: 26rem;
         width: 100vw;
         position: absolute;
         z-index: -1;
@@ -142,16 +147,16 @@
         // border: solid;
         background-color: rgba(0, 0, 0, 0.877);
         color: white;
-        height: 34rem;
+        height: 26rem;
         padding-left: 1.5rem;
         padding-right: 2.5rem;
-        padding-top: 6rem;
+        padding-top: 3rem;
 
 
         .heroheading {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1.3rem;
 
             .line1 {
                 display: flex;
@@ -162,7 +167,7 @@
             .line2 {
                 display: flex;
                 gap: 0.6rem;
-                margin-top: -2rem;
+                margin-top: -1.2rem;
                 overflow: hidden;
 
     
@@ -175,6 +180,7 @@
                 font-size: 23px;
                 font-weight: 700;
                 padding: 0.4rem;
+                margin-left: 0.6rem;
                 background-color: rgba(173, 225, 173, 0.877);
                 border-radius: 1rem;
             }
@@ -208,7 +214,36 @@
     
                 }
 
-        }   
+                .wind {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 2rem;
+                    gap: 0.3rem;
+                    margin-left: 1.1rem;
+                    // margin-top: 5rem;
+                    overflow: hidden;
+                    rotate: -90deg;
+                    // border: solid;
+                    div {
+                        border-bottom: solid 1.5px black;
+                        width: 2rem;
+                        margin-right: 4rem;
+                        // position: absolute;
+                    }
+                    .wind1 {
+                        margin-left: -2rem;
+                    }
+                    .wind2 {
+                        margin-left: -4rem;
+                    }
+                    .wind3 {
+                        margin-left: -4rem;
+                    }
+                    .wind4 {
+                        margin-left: -2rem;
+                    }
+                }
+            }   
         .portfolio {
             border-top:  solid;
             border-bottom:  solid;
@@ -305,6 +340,7 @@ const svg = ref(null);
 const wind1 = ref(null);
 const wind2 = ref(null);
 const wind3 = ref(null);
+const wind4 = ref(null);
 
 
 
@@ -312,6 +348,7 @@ onMounted(() => {
   const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power.in()' } });
   const tl2 = gsap.timeline({ defaults: { duration: 0.4, ease: 'power.in()' } });
   const tl3 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
+  const tl4 = gsap.timeline({ defaults: { duration: 3, ease: 'power.in()' } });
 
   tl.from(first.value, { y: 80, delay: 0.06 });
   tl.from(second.value, { y: 80, delay: 0.11 }, '<'); // Add the second animation to start immediately after the first one
@@ -342,10 +379,14 @@ onMounted(() => {
 
   tl3.to(svg.value, { rotation: -45, delay: 0, duration: 0.3}); // Add the second animation to start immediately after the first one
   
-  tl3.to(svg.value, { y: -85, delay: 0}, '<'); // Add the second animation to start immediately after the first one
-  tl3.to(wind1.value, { y: -40, delay: 0.1 }, '<'); // Add the third animation to start immediately after the second one
-  tl3.to(wind2.value, { y: -40, delay: 0.15 }, '<'); // Add the third animation to start immediately after the second one
-  tl3.to(wind3.value, { y: -40, delay: 0.2 }, '<'); // Add the third animation to start immediately after the second one
+  tl3.to(svg.value, { y: -95, delay: 0}, '<'); // Add the second animation to start immediately after the first one
+
+
+
+  tl4.to(wind1.value, { x: 250, delay: 0}, '<'); // Add the third animation to start immediately after the second one
+  tl4.to(wind2.value, { x: 250, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
+  tl4.to(wind3.value, { x: 250, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
+  tl4.to(wind4.value, { x: 250, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
 
   ScrollTrigger.create({
     trigger: first.value,
@@ -380,6 +421,19 @@ onMounted(() => {
     scrub: 3,
     animation: tl3,
     onEnterBack: () => tl3.reverse(), 
+
+  });
+
+  ScrollTrigger.create({
+    trigger: wind1.value,
+    start: '300% 70%',
+    end: '300% 45%',
+    markers: true,
+    // scrub: 4,
+    animation: tl4,
+    onLeave: () => tl4.pause(), 
+    onEnter: () => tl4.play(), 
+    
 
   });
 
