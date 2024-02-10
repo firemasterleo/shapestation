@@ -433,7 +433,7 @@ onMounted(() => {
     start: '300% 70%',
     end: '300% 45%',
     // markers: true,
-    // scrub: 4,
+    scrub: 3,
     animation: tl4,
     // onLeave: () => tl4.pause(), 
     onEnter: () => tl4.play(), 
