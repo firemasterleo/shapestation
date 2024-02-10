@@ -180,9 +180,13 @@
                 font-size: 23px;
                 font-weight: 700;
                 padding: 0.4rem;
+                border-color: rgba(173, 225, 173, 0.877);
                 margin-left: 0.6rem;
                 background-color: rgba(173, 225, 173, 0.877);
                 border-radius: 1rem;
+                color: black;
+                font-weight: bolder;
+                // outline: none;
             }
 
         }
@@ -348,7 +352,7 @@ onMounted(() => {
   const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power.in()' } });
   const tl2 = gsap.timeline({ defaults: { duration: 0.4, ease: 'power.in()' } });
   const tl3 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
-  const tl4 = gsap.timeline({ defaults: { duration: 3, ease: 'power.in()' } });
+  const tl4 = gsap.timeline({ defaults: { duration: 3.5, ease: 'power.in()' } });
 
   tl.from(first.value, { y: 80, delay: 0.06 });
   tl.from(second.value, { y: 80, delay: 0.11 }, '<'); // Add the second animation to start immediately after the first one
@@ -383,10 +387,10 @@ onMounted(() => {
 
 
 
-  tl4.to(wind1.value, { x: 250, delay: 0}, '<'); // Add the third animation to start immediately after the second one
-  tl4.to(wind2.value, { x: 250, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
-  tl4.to(wind3.value, { x: 250, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
-  tl4.to(wind4.value, { x: 250, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
+  tl4.to(wind1.value, { x: 450, delay: 0}, '<'); // Add the third animation to start immediately after the second one
+  tl4.to(wind2.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
+  tl4.to(wind3.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
+  tl4.to(wind4.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
 
   ScrollTrigger.create({
     trigger: first.value,
@@ -428,10 +432,10 @@ onMounted(() => {
     trigger: wind1.value,
     start: '300% 70%',
     end: '300% 45%',
-    markers: true,
+    // markers: true,
     // scrub: 4,
     animation: tl4,
-    onLeave: () => tl4.pause(), 
+    // onLeave: () => tl4.pause(), 
     onEnter: () => tl4.play(), 
     
 
