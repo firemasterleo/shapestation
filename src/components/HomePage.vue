@@ -20,7 +20,7 @@
                 <h1 ref="fourth">Website</h1>
                 <h1 ref="fifth">Development</h1>
             </div>
-            <p>For businesses. We build modern websites that are simple and intuitive, using industry best practices.</p>
+            <p>For businesses, using industry best practices, We build modern, simple and intuitive websites that serve.</p>
             <button class="button">Get Started</button>
 
         </div>
@@ -45,10 +45,10 @@
 
             </div>
 
-            <h1>About Shapestation</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                 Placeat commodi ipsa modi amet exercitationem cum
-                  voluptate, sint enim esse culpa, mollitia vitae in dolore nobis facilis provident, aperiam rem explicabo?</p>
+            <h2>About Shapestation</h2>
+            <p>Our mission is simple: to empower businesses with the tools they need to thrive in an ever-evolving digital landscape.
+                <br><br> We're here to enhance your online presence and help you stand out in a crowded digital marketplace
+            </p>
                   <div class="svg"></div>
                   <div class="portfolio">
                     <h2>Portfolio</h2>
@@ -59,7 +59,7 @@
         <div class="review">
 
             <div class="svg"></div>
-            <h1>Contact Us</h1>
+            <h2>Contact Us</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                  Placeat commodi ipsa modi amet exercitationem cum
                   voluptate, sint enim esse culpa, mollitia vitae in dolore nobis facilis provident, aperiam rem explicabo?</p>
@@ -68,7 +68,7 @@
         <div class="review">
 
             <div class="svg"></div>
-            <h1>Our Workflow</h1>
+            <h2>Our Workflow</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                  Placeat commodi ipsa modi amet exercitationem cum
                   voluptate, sint enim esse culpa, mollitia vitae in dolore nobis facilis provident, aperiam rem explicabo?</p>
@@ -177,7 +177,7 @@
             }
             .button {
                 width: 14rem;
-                font-size: 23px;
+                font-size: 20px;
                 font-weight: 700;
                 padding: 0.4rem;
                 border-color: rgba(173, 225, 173, 0.877);
@@ -201,19 +201,25 @@
             padding-left: 1rem;
             padding-right: 1rem;
             position: relative;
+            z-index: 0;
+            // border: solid;
+            // margin: 1rem 0;
 
             .rocket {
                 // border: solid;
-                height: 5.8rem;
+                height: 15rem;
                 width: 7rem;
                 position: absolute;
+                z-index: -2;
+
                 right: 1rem;
                 top: 0rem;
     
                 .svg {
                     position: absolute;
-                    left: 3rem;
-                    top: 3rem;
+                    z-index: -2;
+                    left: 2.5rem;
+                    top: 10rem;
                     rotate: -45deg;
     
                 }
@@ -223,11 +229,15 @@
                     flex-direction: column;
                     margin-top: 2rem;
                     gap: 0.3rem;
-                    margin-left: 1.1rem;
+                    // margin-left: 1.1rem;
                     // margin-top: 5rem;
                     overflow: hidden;
                     rotate: -90deg;
                     // border: solid;
+                    width: 18rem;
+                    position: relative;
+                    top: 1rem;
+                    right: 5.5rem;
                     div {
                         border-bottom: solid 1.5px black;
                         width: 2rem;
@@ -248,6 +258,13 @@
                     }
                 }
             }   
+            h2 {
+                font-size: 28px;
+
+            }
+            p {
+                font-size: 20px;
+            }
         .portfolio {
             border-top:  solid;
             border-bottom:  solid;
@@ -255,9 +272,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 20px;
             letter-spacing: 0.1rem;
             margin-top: -1rem;
+            h2 {
+                font-size: 24px;
+
+            }
 
 
         } 
@@ -273,6 +293,14 @@
             gap: 1.5rem;
             padding-top: 2rem;
             padding-left: 1rem;
+
+            h2 {
+                font-size: 28px;
+
+            }
+            p {
+                font-size: 18px;
+            }
 
         }
         .tools {
@@ -352,7 +380,7 @@ onMounted(() => {
   const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power.in()' } });
   const tl2 = gsap.timeline({ defaults: { duration: 0.4, ease: 'power.in()' } });
   const tl3 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
-  const tl4 = gsap.timeline({ defaults: { duration: 3, ease: 'power.in()' } });
+  const tl4 = gsap.timeline({ defaults: { duration: 5, ease: 'power.in()' } });
 
   tl.from(first.value, { y: 80, delay: 0.06 });
   tl.from(second.value, { y: 80, delay: 0.11 }, '<'); // Add the second animation to start immediately after the first one
@@ -383,11 +411,11 @@ onMounted(() => {
 
   tl3.to(svg.value, { rotation: -45, delay: 0, duration: 0.3}); // Add the second animation to start immediately after the first one
   
-  tl3.to(svg.value, { y: -95, delay: 0}, '<'); // Add the second animation to start immediately after the first one
+  tl3.to(svg.value, { y: -150, delay: 0}, '<'); // Add the second animation to start immediately after the first one
 
 
 
-  tl4.to(wind1.value, { x: 450, delay: 1}, '<'); // Add the third animation to start immediately after the second one
+  tl4.to(wind1.value, { x: 450, delay: 1.5}, '<'); // Add the third animation to start immediately after the second one
   tl4.to(wind2.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
   tl4.to(wind3.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
   tl4.to(wind4.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
@@ -433,7 +461,7 @@ onMounted(() => {
     start: '300% 70%',
     end: '300% 45%',
     // markers: true,
-    scrub:5,
+    scrub:6,
     animation: tl4,
     // onLeave: () => tl4.pause(), 
 
