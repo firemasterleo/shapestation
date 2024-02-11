@@ -163,7 +163,7 @@ background-color: rgba(202, 194, 194, 0.886);
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
-            // overflow-y: hidden;
+            overflow-y: hidden;
             z-index: 5;
             transition: transform 0.3s cubic-bezier(0.36, 0.66, 0.04, 1), opacity 0.5s;
     
