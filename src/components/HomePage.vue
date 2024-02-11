@@ -145,7 +145,7 @@
     
     .herosection {
         // border: solid;
-        background-color: rgb(25, 24, 24);
+        background-color: rgba(0, 0, 0, 0.644);
         color: white;
         height: 26rem;
         padding-left: 1.5rem;
@@ -193,6 +193,7 @@
     }
     .section2 {
         padding-inline: 1.2rem;
+        background-color: rgb(246, 248, 244);
         // height: fit-content;
 
         .review1 {
