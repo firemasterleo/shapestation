@@ -192,14 +192,13 @@
         }
     }
     .section2 {
+        padding-inline: 1.2rem;
 
         .review1 {
             display: flex;
             flex-direction: column;
             gap: 1rem;
             padding-top: 2rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
             position: relative;
             z-index: 0;
             // border: solid;
@@ -264,6 +263,7 @@
             }
             p {
                 font-size: 20px;
+                width: 23rem;
             }
         .portfolio {
             border-top:  solid;
@@ -292,7 +292,7 @@
             flex-direction: column;
             gap: 1.5rem;
             padding-top: 2rem;
-            padding-left: 1rem;
+        
 
             h2 {
                 font-size: 28px;
@@ -300,6 +300,8 @@
             }
             p {
                 font-size: 18px;
+                width: 23rem;
+
             }
 
         }
