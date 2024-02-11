@@ -17,7 +17,7 @@
                 <h1 ref="third">Easy</h1>
             </div>
             <div class="line2">
-                <h1 ref="fourth">Website</h1>
+                <h1 ref="fourth">Web</h1>
                 <h1 ref="fifth">Development</h1>
             </div>
             <p>For businesses, using industry best practices, We build modern, simple and intuitive websites that serve.</p>
@@ -217,7 +217,7 @@
                 .svg {
                     position: absolute;
                     z-index: -2;
-                    left: 2.5rem;
+                    left: 2.4rem;
                     top: 10rem;
                     rotate: -45deg;
     
@@ -266,8 +266,8 @@
                 width: 23rem;
             }
         .portfolio {
-            border-top:  solid;
-            border-bottom:  solid;
+            border-top:  solid rgb(169, 163, 163);
+            border-bottom:  solid 1px rgb(169, 163, 163);
             height: 3.5rem;
             display: flex;
             align-items: center;
@@ -413,11 +413,11 @@ onMounted(() => {
 
   tl3.to(svg.value, { rotation: -45, delay: 0, duration: 0.3}); // Add the second animation to start immediately after the first one
   
-  tl3.to(svg.value, { y: -150, delay: 0}, '<'); // Add the second animation to start immediately after the first one
+  tl3.to(svg.value, { y: -210, delay: 0}, '<'); // Add the second animation to start immediately after the first one
 
 
 
-  tl4.to(wind1.value, { x: 450, delay: 1.5}, '<'); // Add the third animation to start immediately after the second one
+  tl4.to(wind1.value, { x: 450, delay: 1}, '<'); // Add the third animation to start immediately after the second one
   tl4.to(wind2.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
   tl4.to(wind3.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
   tl4.to(wind4.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
