@@ -50,9 +50,9 @@
                 <br><br> We're here to enhance your online presence and help you stand out in a crowded digital marketplace
             </p>
                   <div class="svg"></div>
-                  <div class="portfolio">
+                  <div class="portfolio" :class="{ 'is-portfolioexpanded': is_portfolioexpanded }" @click="TogglePortfolio">
                     <h2>Portfolio</h2>
-                    <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='34' height='34'><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>
+                    <svg :class="{ 'is-portfolioexpanded': is_portfolioexpanded }" xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='34' height='34'><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>
                              
                 </div>
         </div>
@@ -125,7 +125,7 @@
 
 <style lang="scss" scoped>
 .bodysection {
-    height: 100rem;
+    height: fit-content;
     // border: solid;
 
     .image {
@@ -145,7 +145,7 @@
     
     .herosection {
         // border: solid;
-        background-color: rgba(0, 0, 0, 0.877);
+        background-color: rgba(0, 0, 0, 0.644);
         color: white;
         height: 26rem;
         padding-left: 1.5rem;
@@ -193,6 +193,7 @@
     }
     .section2 {
         padding-inline: 1.2rem;
+        // height: fit-content;
 
         .review1 {
             display: flex;
@@ -269,20 +270,37 @@
             border-top:  solid rgb(169, 163, 163);
             border-bottom:  solid 1px rgb(169, 163, 163);
             height: 3.5rem;
+            padding-top: 0.5rem;
             display: flex;
-            align-items: center;
             justify-content: space-between;
             letter-spacing: 0.1rem;
             margin-top: -1rem;
+            transition: 0.3s ease-in;
+
             h2 {
                 font-size: 24px;
 
+
+            }
+
+
+            &.is-portfolioexpanded {
+                height: 30rem;
+                transition: 0.3s ease-in;
             }
 
 
         } 
         svg {
             margin-right: 1rem;
+            transition: 0.3s ease-in;
+
+
+            &.is-portfolioexpanded {
+                transform: rotateZ(90deg);
+                transition: 0.3s ease-in;
+
+            }
         }
 
 
@@ -352,6 +370,14 @@ import { ref, onMounted, onBeforeUnmount, onUnmounted } from 'vue';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+
+
+const is_portfolioexpanded = ref(false)
+
+const TogglePortfolio = () => {
+    is_portfolioexpanded.value = !is_portfolioexpanded.value;
+}
+
 
 
 const first = ref(null);

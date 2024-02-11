@@ -2,8 +2,8 @@
     <div class="mainveil" :class="{ 'is-expanded': is_expanded }" @click="ToggleMenu"></div>
     
     <!-- for headers to work well with scrolling they need to be free within the template not within a div -->
-    <div class="headercontainer"> 
-      <div class="header" :class="{ 'ishidingheader': isHidingHeader && !isScrollingUp }"> 
+    <div class="headercontainer" :class="{ 'ishidingheader': isHidingHeader && !isScrollingUp }"> 
+      <div class="header"> 
           <!-- <div class="logo">
               <img src="./assets/unikmelogo.png" alt="proselogo">
           </div> -->
@@ -35,6 +35,8 @@
 </div>
 
 
+
+
   <router-view/>
 
 
@@ -44,8 +46,7 @@
     <div class="logoandnav">
 
         <div class="logoname">
-            <img class="img1" src="./assets/unikmelogo.png" alt="logoname">
-            <img class="img2" src="./assets/unikmename.png" alt="logoimage">
+
         </div>
 
         <div class="nav">
@@ -69,7 +70,7 @@
     </div>
   
     <div class="rights">
-      <p>© 2022 UnikmeCouture. All rights reserved.</p>
+      <p>© 2022 Shapestatioin inc. All rights reserved.</p>
     </div>
 </div>
 

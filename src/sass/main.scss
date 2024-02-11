@@ -43,6 +43,13 @@ background-color: rgba(202, 194, 194, 0.886);
         z-index: 100;
         overflow-x: hidden;
         width: 100vw;
+
+            
+        &.ishidingheader {
+    
+            transform: translateY(-6rem);
+            transition: all 0.25s ease-in;
+    }
     
     
         .header {
@@ -54,7 +61,7 @@ background-color: rgba(202, 194, 194, 0.886);
     
             align-items: center;
             justify-content: space-between;
-            background: linear-gradient(to bottom right, rgb(0, 0, 0), #000000);
+            background-color: rgb(25, 24, 24);
             transition: all 0.25s ease-in;
     
             .logo {
@@ -267,12 +274,12 @@ background-color: rgba(202, 194, 194, 0.886);
         flex-direction: column;
         justify-content: space-between;
         gap: 2rem;
+        height: 40rem;
         padding-top: 2rem;
-        height: fit-content;
         // border: solid red;
         padding-left: 2rem;
         padding-right: 2rem;
-        background-color: #000000;
+        background-color: rgb(25, 24, 24);
 
         .logoandnav {
             display: flex;
@@ -342,10 +349,11 @@ background-color: rgba(202, 194, 194, 0.886);
 
 
         .rights {
-            background-color: #371848;
-            color: #000000;
+            background-color: rgb(25, 24, 24);
+            color: #ffffff;
             display: flex;
             justify-content: center;
+            padding: 0.5rem;
 
         }
     }
