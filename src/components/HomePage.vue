@@ -258,7 +258,7 @@
                 }
             }   
             h2 {
-                font-size: 28px;
+                font-size: 26px;
 
             }
             p {
@@ -295,7 +295,7 @@
         
 
             h2 {
-                font-size: 28px;
+                font-size: 26px;
 
             }
             p {
