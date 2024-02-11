@@ -46,7 +46,7 @@
             </div>
 
             <h2>About Shapestation</h2>
-            <p>Our mission is simple: to empower businesses with the tools they need to thrive in an ever-evolving digital landscape.
+            <p>  We're a team of passionate and creative individuals and our mission is simple: to empower businesses with the tools they need to thrive in an ever-evolving digital landscape.
                 <br><br> We're here to enhance your online presence and help you stand out in a crowded digital marketplace
             </p>
                   <div class="svg"></div>

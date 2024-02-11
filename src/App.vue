@@ -24,9 +24,9 @@
 
         <div class="home" >
 
-    <router-link class="menuitem" to="/TextSlideUp" @click="ToggleMenu">
+    <!-- <router-link class="menuitem" to="/TextSlideUp" @click="ToggleMenu">
   <h3>Home</h3>
-   </router-link>
+   </router-link> -->
 </div>
     
     
@@ -83,7 +83,7 @@
 
 <script setup>
 
-import { ref, onMounted, onBeforeUnmount, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import './sass/main.scss';
 
 
