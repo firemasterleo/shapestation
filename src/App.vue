@@ -27,9 +27,7 @@
     <router-link class="menuitem" to="/TextSlideUp" @click="ToggleMenu">
   <h3>Home</h3>
    </router-link>
-    <router-link class="menuitem" to="/TextSlideUp" @click="ToggleMenu">
-  <h3>Home</h3>
-   </router-link>
+
 </div>
     
     
