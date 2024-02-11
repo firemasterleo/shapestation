@@ -20,6 +20,7 @@
       </div>
 
     
+    </div>
     <div class="menuslidelist" :class="{ 'is-expanded': is_expanded }">
 
         <div class="home" >
@@ -31,7 +32,6 @@
 </div>
     
     
-</div>
 </div>
 
 
