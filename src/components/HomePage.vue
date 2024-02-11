@@ -5,7 +5,7 @@
     
     <div class="image">
 
-        <img src="../assets/shapestationimage2.jpg" alt="">
+        <img src="../assets/shapestationimage6.jpg" alt="">
     </div>
     <div class="herosection">
         
@@ -23,6 +23,12 @@
             <p>For businesses, using industry best practices, We build modern, simple and intuitive websites that serve.</p>
             <button class="button">Get Started</button>
 
+        </div>
+        <div class="cosmic">
+            <div class="planet1"></div>
+            <div class="planet1"></div>
+            <div class="planet1"></div>
+            <div class="planet1"></div>
         </div>
 
     </div>
@@ -56,7 +62,7 @@
                              
                 </div>
         </div>
-        <div class="review">
+        <!-- <div class="review">
 
             <div class="svg"></div>
             <h2>Contact Us</h2>
@@ -73,8 +79,8 @@
                  Placeat commodi ipsa modi amet exercitationem cum
                   voluptate, sint enim esse culpa, mollitia vitae in dolore nobis facilis provident, aperiam rem explicabo?</p>
                   <div class="svg"></div>
-        </div>
-        <div class="tools">
+        </div> -->
+        <!-- <div class="tools">
             <div class="circle"></div>
             <div class="svg">
                 <div>
@@ -108,8 +114,12 @@
                 
             </div>
 
+        </div> -->
         </div>
+        <div class="section3">
+            <h2>hello</h2>
         </div>
+
 
 </div>
 
@@ -129,7 +139,7 @@
     // border: solid;
 
     .image {
-        height: 26rem;
+        height: 45rem;
         width: 100vw;
         position: absolute;
         z-index: -1;
@@ -145,23 +155,27 @@
     
     .herosection {
         // border: solid;
-        background-color: rgba(0, 0, 0, 0.644);
+        background-color: rgba(0, 0, 0, 0.416);
         color: white;
-        height: 26rem;
+        height: 45rem;
         padding-left: 1.5rem;
-        padding-right: 2.5rem;
+        padding-right: 1.5rem;
         padding-top: 3rem;
+         position: relative;
+
 
 
         .heroheading {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 1.3rem;
 
             .line1 {
                 display: flex;
                 gap: 0.6rem;
                 overflow: hidden;
+                font-size: 19px;
     
             }
             .line2 {
@@ -169,11 +183,14 @@
                 gap: 0.6rem;
                 margin-top: -1.2rem;
                 overflow: hidden;
+                font-size: 19px;
+
 
     
             }
             p {
-                font-size: 20px;
+                font-size: 19.5px;
+                text-align: center;
             }
             .button {
                 width: 14rem;
@@ -183,7 +200,7 @@
                 border-color: rgba(173, 225, 173, 0.877);
                 margin-left: 0.6rem;
                 background-color: rgba(173, 225, 173, 0.877);
-                border-radius: 1rem;
+                border-radius: 2rem;
                 color: black;
                 font-weight: bolder;
                 // outline: none;
@@ -193,8 +210,10 @@
     }
     .section2 {
         padding-inline: 1.2rem;
-        background-color: rgb(246, 248, 244);
+        background-color: rgb(23, 22, 22);
         // height: fit-content;
+        color: white;
+
 
         .review1 {
             display: flex;
@@ -276,7 +295,9 @@
             justify-content: space-between;
             letter-spacing: 0.1rem;
             margin-top: -1rem;
+            margin-bottom: 4rem;
             transition: 0.3s ease-in;
+            // border: solid;
 
             h2 {
                 font-size: 24px;
@@ -325,7 +346,7 @@
 
         }
         .tools {
-            // border: solid rgba(126, 155, 120, 0.379);
+            border: solid rgba(126, 155, 120, 0.379);
             overflow: hidden;
 
             // width: 11rem;
@@ -358,6 +379,13 @@
 
             }
         }
+    }
+    .section3 {
+        width: 100vw; /* Adjust width as needed */
+  height: 60rem; /* Adjust height as needed */
+  background-color: #333; /* Adjust color */
+  clip-path: polygon(200% 0%, 100% 0%, 100% 100%, -1000% 100%); 
+
     }
  }
 
