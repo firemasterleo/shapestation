@@ -298,7 +298,7 @@
 
 
             &.is-portfolioexpanded {
-                transform: rotateZ(90deg);
+                transform: rotateZ(135deg);
                 transition: 0.3s ease-in;
 
             }
