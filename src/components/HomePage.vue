@@ -145,7 +145,7 @@
     
     .herosection {
         // border: solid;
-        background-color: rgba(0, 0, 0, 0.644);
+        background-color: rgb(25, 24, 24);
         color: white;
         height: 26rem;
         padding-left: 1.5rem;
