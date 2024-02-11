@@ -78,7 +78,7 @@
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import './sass/main.scss';
 </style>
 
