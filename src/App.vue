@@ -27,6 +27,9 @@
     <router-link class="menuitem" to="/TextSlideUp" @click="ToggleMenu">
   <h3>Home</h3>
    </router-link>
+    <router-link class="menuitem" to="/TextSlideUp" @click="ToggleMenu">
+  <h3>Home</h3>
+   </router-link>
 </div>
     
     
@@ -82,21 +85,21 @@
 </style>
 
 <script setup>
-
 import { ref, onMounted, onUnmounted } from 'vue';
+
+
+
 import './sass/main.scss';
 
 
 
 
-
-
+//togglemenu
 const is_expanded = ref(false)
 
 const ToggleMenu = () => {
-is_expanded.value = !is_expanded.value;
+    is_expanded.value = !is_expanded.value;
 }
-
 
 
 
@@ -113,51 +116,50 @@ const bottomMargin = 250; // Adjust this margin as needed
 let lastScrollTop = 0;
 
 const handleScroll = () => {
-const currentScrollTop = window.scrollY;
-const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const currentScrollTop = window.scrollY;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
 
 
 
 
-if (currentScrollTop > 0) {
-isAtTop.value = false;
+  if (currentScrollTop > 0) {
+    isAtTop.value = false;
 
-if (currentScrollTop > translateThreshold) {
-  isScrollingUp.value = currentScrollTop < lastScrollTop;
+    if (currentScrollTop > translateThreshold) {
+      isScrollingUp.value = currentScrollTop < lastScrollTop;
 
 
-      isHidingHeader.value = true;
+          isHidingHeader.value = true;
 
-  }
-else {
-  isHidingHeader.value = false;
-}
-} 
-else {
-isAtTop.value = true;
-isHidingHeader.value = false;
-}
-if (is_expanded.value) {
-isScrollingUp.value = true; } //i used this code to turn off scrolling of the header when isexpanded condition is true
-
-if (currentScrollTop >= maxScroll - bottomMargin) {
+      }
+    else {
+      isHidingHeader.value = false;
+    }
+  } 
+  else {
+    isAtTop.value = true;
     isHidingHeader.value = false;
-    isScrollingUp.value = true;
-  }   // i used this one to bring the header down when the footer shows up 
+  }
+  if (is_expanded.value) {
+    isScrollingUp.value = true; } //i used this code to turn off scrolling of the header when isexpanded condition is true
 
+    if (currentScrollTop >= maxScroll - bottomMargin) {
+        isHidingHeader.value = false;
+        isScrollingUp.value = true;
+      }   // i used this one to bring the header down when the footer shows up 
 
+  
 
-lastScrollTop = currentScrollTop; 
+  lastScrollTop = currentScrollTop; 
 };
 
 onMounted(() => {
-window.addEventListener('scroll', handleScroll);
+  window.addEventListener('scroll', handleScroll);
 });
 
 onUnmounted(() => {
-window.removeEventListener('scroll', handleScroll);
+  window.removeEventListener('scroll', handleScroll);
 });
-
 
 
 
