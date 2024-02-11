@@ -43,6 +43,8 @@ background-color: rgba(202, 194, 194, 0.886);
         z-index: 100;
         overflow-x: hidden;
         width: 100vw;
+        transition: all 0.25s ease-in;
+
 
             
         &.ishidingheader {
@@ -140,17 +142,7 @@ background-color: rgba(202, 194, 194, 0.886);
     
                 }
             }
-    
-              
-              
-    
-    
-    
-            &.ishidingheader {
-    
-                    transform: translateY(-6rem);
-                    transition: all 0.25s ease-in;
-            }
+
     
         }
     
