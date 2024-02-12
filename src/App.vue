@@ -8,7 +8,7 @@
               <img src="./assets/unikmelogo.png" alt="proselogo">
           </div> -->
           <div class="name">
-            <h1>Shapestation</h1>
+            <h1>Shapestation Africa</h1>
               <!-- <img src="./assets/unikmename.png" alt="proselogo"> -->
           </div>
           <div class="hamburger" :class="{ 'is-active': is_expanded }" @click="ToggleMenu">
@@ -84,7 +84,7 @@
 </style>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onBeforeUnmount, onUnmounted } from 'vue';
 
 
 
@@ -158,6 +158,34 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
+});
+
+let scrollPosition = 0;
+
+const saveScrollPosition = () => {
+  scrollPosition = window.scrollY;
+  localStorage.setItem('scrollPosition', scrollPosition.toString());
+};
+
+const restoreScrollPosition = () => {
+  const storedPosition = localStorage.getItem('scrollPosition');
+  if (storedPosition !== null) {
+    scrollPosition = parseInt(storedPosition);
+    window.scrollTo(0, scrollPosition);
+  }
+};
+
+// Save scroll position just before the page is unloaded (refreshed)
+window.addEventListener('beforeunload', saveScrollPosition);
+
+// Restore scroll position when the page is loaded again after a refresh
+onMounted(() => {
+  restoreScrollPosition();
+});
+
+// Cleanup the event listener when the component is unmounted
+onBeforeUnmount(() => {
+  window.removeEventListener('beforeunload', saveScrollPosition);
 });
 
 
