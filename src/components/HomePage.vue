@@ -570,7 +570,7 @@ onMounted(() => {
   const tl2 = gsap.timeline({ defaults: { duration: 0.4, ease: 'power.in()' } });
   const tl3 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
   const tl4 = gsap.timeline({ defaults: { duration: 5, ease: 'power.in()' } });
-  const tl5 = gsap.timeline({ defaults: { duration: 0.7, ease: 'power.in()' } });
+  const tl5 = gsap.timeline({ defaults: { duration: 0.6, ease: 'power.in()' } });
 
   tl.from(first.value, { y: 80, delay: 0.06 });
   tl.from(second.value, { y: 80, delay: 0.09 }, '<'); // Add the second animation to start immediately after the first one
@@ -611,8 +611,8 @@ onMounted(() => {
   tl4.to(wind4.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
 
 
-  tl5.from(about.value, { y: 80, delay: 0.05 }, '<');
-  tl5.from(shapestation.value, { y: 80, delay: 0.09 },'<'); // Add the second animation to start immediately after the first one
+  tl5.from(about.value, { y: 80, delay: 0.05 }, );
+  tl5.from(shapestation.value, { y: 80, delay: 0.2 },'<'); // Add the second animation to start immediately after the first one
 
   ScrollTrigger.create({
     trigger: first.value,
@@ -668,8 +668,8 @@ onMounted(() => {
 
   ScrollTrigger.create({
     trigger: about.value,
-    start: 'top 99%',
-    end: 'bottom 99%',
+    start: 'top 100%',
+    end: 'bottom 100%',
     // markers: true,
     
     animation: tl5,
