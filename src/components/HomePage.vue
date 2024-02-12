@@ -20,8 +20,8 @@
                 <h1 ref="fourth">Web</h1>
                 <h1 ref="fifth">Development</h1>
             </div>
-            <p>For businesses, using industry best practices, We build modern, simple and intuitive websites that serve.</p>
-            <button class="button">Get Started</button>
+            <p>To suit and serve your brand, we build Modern, smoothe and intuitive webpages that are easy to navigate, guranteed to give your Users a great experience.</p>
+            <button class="button">Lets Get Started</button>
 
         </div>
         <div class="cosmic">
@@ -176,6 +176,8 @@
                 gap: 0.6rem;
                 overflow: hidden;
                 font-size: 19px;
+                color: rgb(179, 171, 171);
+
     
             }
             .line2 {
@@ -184,6 +186,8 @@
                 margin-top: -1.2rem;
                 overflow: hidden;
                 font-size: 19px;
+                color: rgb(179, 171, 171);
+
 
 
     
@@ -191,17 +195,18 @@
             p {
                 font-size: 19.5px;
                 text-align: center;
+                color: rgb(202, 196, 196);
             }
             .button {
                 width: 14rem;
                 font-size: 20px;
                 font-weight: 700;
                 padding: 0.4rem;
-                border-color: rgba(173, 225, 173, 0.877);
+                border-color: rgba(255, 255, 255, 0.326);
                 margin-left: 0.6rem;
-                background-color: rgba(173, 225, 173, 0.877);
+                background-color: rgba(105, 109, 100, 0.185);
                 border-radius: 2rem;
-                color: black;
+                color: rgb(202, 196, 196);
                 font-weight: bolder;
                 // outline: none;
             }
@@ -280,11 +285,15 @@
             }   
             h2 {
                 font-size: 26px;
+                color: rgb(179, 171, 171);
+
 
             }
             p {
                 font-size: 18px;
                 width: 23rem;
+                color: rgb(202, 196, 196);
+
             }
         .portfolio {
             border-top:  solid rgb(169, 163, 163);
@@ -434,16 +443,16 @@ const wind4 = ref(null);
 
 
 onMounted(() => {
-  const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power.in()' } });
+  const tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'power.in()' } });
   const tl2 = gsap.timeline({ defaults: { duration: 0.4, ease: 'power.in()' } });
   const tl3 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
   const tl4 = gsap.timeline({ defaults: { duration: 5, ease: 'power.in()' } });
 
   tl.from(first.value, { y: 80, delay: 0.06 });
-  tl.from(second.value, { y: 80, delay: 0.11 }, '<'); // Add the second animation to start immediately after the first one
-  tl.from(third.value, { y: 80, delay: 0.16 }, '<'); // Add the third animation to start immediately after the second one
-  tl.from(fourth.value, { y: 80, delay: 0.16 }, '<'); // Add the third animation to start immediately after the second one
-  tl.from(fifth.value, { y: 80, delay: 0.16 }, '<'); // Add the third animation to start immediately after the second one
+  tl.from(second.value, { y: 80, delay: 0.09 }, '<'); // Add the second animation to start immediately after the first one
+  tl.from(third.value, { y: 80, delay: 0.1 }, '<'); // Add the third animation to start immediately after the second one
+  tl.from(fourth.value, { y: 80, delay: 0.1 }, '<'); // Add the third animation to start immediately after the second one
+  tl.from(fifth.value, { y: 80, delay: 0.2 }, '<'); // Add the third animation to start immediately after the second one
 
 
   tl2.from(css3.value, { y: 40, delay: 0.2 }, '<'); // Add the second animation to start immediately after the first one
