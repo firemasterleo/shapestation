@@ -668,8 +668,8 @@ onMounted(() => {
 
   ScrollTrigger.create({
     trigger: about.value,
-    start: '-1000% 60%',
-    end: '1000% 60%',
+    start: 'top 95%',
+    end: 'bottom 95%',
     // markers: true,
     
     animation: tl5,
