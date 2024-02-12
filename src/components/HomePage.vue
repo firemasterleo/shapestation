@@ -81,7 +81,7 @@
 
                 </div>
                 <div class="shapestation" ref="shapestation">
-                    <h2>Shapestation</h2>
+                    <h2>Shapestation inc</h2>
                     
                 </div>
 
