@@ -670,7 +670,7 @@ onMounted(() => {
     trigger: about.value,
     start: '-1000% 60%',
     end: '1000% 60%',
-    markers: true,
+    // markers: true,
     
     animation: tl5,
     onEnterBack: () => tl5.reverse(), 
