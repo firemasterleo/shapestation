@@ -60,7 +60,7 @@
     <div class="section2">
         
         <div class="review1">
-            <div class="rocket">
+            <!-- <div class="rocket">
                 <div class="svg" ref="svg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path d="M15.78 15.84S18.64 13 19.61 12c3.07-3 1.54-9.18 1.54-9.18S15 1.29 12 4.36C9.66 6.64 8.14 8.22 8.14 8.22S4.3 7.42 2 9.72L14.25 22c2.3-2.33 1.53-6.16 1.53-6.16zm-1.5-9a2 2 0 0 1 2.83 0 2 2 0 1 1-2.83 0zM3 21a7.81 7.81 0 0 0 5-2l-3-3c-2 1-2 5-2 5z"/></svg>
                 </div>
@@ -74,9 +74,18 @@
 
                 </div>
 
-            </div>
+            </div> -->
+            <div class="aboutshapestation">
+                <div class="about" ref="about">
+                    <h2>About</h2>
 
-            <h2>About Shapestation</h2>
+                </div>
+                <div class="shapestation" ref="shapestation">
+                    <h2>Shapestation</h2>
+                    
+                </div>
+
+            </div>
             <p>  We're a team of passionate and creative individuals and our mission is simple: to empower businesses with the tools they need to thrive in an ever-evolving digital landscape.
                 <br><br> We're here to enhance your online presence and help you stand out in a crowded digital marketplace
             </p>
@@ -228,6 +237,10 @@
                 font-weight: 700;
                 padding: 0.4rem;
                 border-color: rgba(255, 255, 255, 0.326);
+                border-top-color: rgba(111, 159, 96, 0.42) ;
+                border-bottom-color: rgba(225, 83, 244, 0.468) ;
+                border-left-color: rgb(73, 82, 73);
+                border-right-color:rgba(225, 83, 244, 0.468) ;
                 margin-left: 0.6rem;
                 background-color: rgba(105, 109, 100, 0.185);
                 border-radius: 2rem;
@@ -256,6 +269,8 @@
                 display: flex;
                 overflow: hidden;
                 gap: 1rem;
+                box-shadow: -2px 0 50px rgba(0, 0, 0, 0.699); /* Apply a box shadow to the left side */
+
                 .innerslider {
                     display: flex;
                     gap: 1rem;
@@ -268,7 +283,7 @@
 
                         width: 8.5rem;
                         height: 5.5rem;
-                        border: solid rgb(73, 82, 73);
+                        border: solid rgba(73, 82, 73, 0.765);
 
                     }
                 }
@@ -302,7 +317,7 @@
 
                         width: 8.5rem;
                         height: 5.5rem;
-                        border: solid rgb(73, 82, 73);
+                        border: solid rgba(225, 83, 244, 0.123);
 
                     }
                 }
@@ -314,9 +329,8 @@
     }
     .section2 {
         padding-inline: 1.2rem;
-        background-color: rgb(23, 22, 22);
+        background-color: rgb(62, 69, 56);
         // height: fit-content;
-        color: white;
 
 
         .review1 {
@@ -329,61 +343,66 @@
             // border: solid;
             // margin: 1rem 0;
 
-            .rocket {
-                // border: solid;
-                height: 15rem;
-                width: 7rem;
-                position: absolute;
-                z-index: -2;
+            // .rocket {
+            //     // border: solid;
+            //     height: 15rem;
+            //     width: 7rem;
+            //     position: absolute;
+            //     z-index: -2;
 
-                right: 1rem;
-                top: 0rem;
+            //     right: 1rem;
+            //     top: 0rem;
     
-                .svg {
-                    position: absolute;
-                    z-index: -2;
-                    left: 2.4rem;
-                    top: 10rem;
-                    rotate: -45deg;
+            //     .svg {
+            //         position: absolute;
+            //         z-index: -2;
+            //         left: 2.4rem;
+            //         top: 10rem;
+            //         rotate: -45deg;
     
-                }
+            //     }
 
-                .wind {
-                    display: flex;
-                    flex-direction: column;
-                    margin-top: 2rem;
-                    gap: 0.3rem;
-                    // margin-left: 1.1rem;
-                    // margin-top: 5rem;
-                    overflow: hidden;
-                    rotate: -90deg;
-                    // border: solid;
-                    width: 18rem;
-                    position: relative;
-                    top: 1rem;
-                    right: 5.5rem;
-                    div {
-                        border-bottom: solid 1.5px black;
-                        width: 2rem;
-                        margin-right: 4rem;
-                        // position: absolute;
-                    }
-                    .wind1 {
-                        margin-left: -2rem;
-                    }
-                    .wind2 {
-                        margin-left: -4rem;
-                    }
-                    .wind3 {
-                        margin-left: -4rem;
-                    }
-                    .wind4 {
-                        margin-left: -2rem;
-                    }
-                }
-            }   
-            h2 {
-                font-size: 26px;
+            //     .wind {
+            //         display: flex;
+            //         flex-direction: column;
+            //         margin-top: 2rem;
+            //         gap: 0.3rem;
+            //         // margin-left: 1.1rem;
+            //         // margin-top: 5rem;
+            //         overflow: hidden;
+            //         rotate: -90deg;
+            //         // border: solid;
+            //         width: 18rem;
+            //         position: relative;
+            //         top: 1rem;
+            //         right: 5.5rem;
+            //         div {
+            //             border-bottom: solid 1.5px black;
+            //             width: 2rem;
+            //             margin-right: 4rem;
+            //             // position: absolute;
+            //         }
+            //         .wind1 {
+            //             margin-left: -2rem;
+            //         }
+            //         .wind2 {
+            //             margin-left: -4rem;
+            //         }
+            //         .wind3 {
+            //             margin-left: -4rem;
+            //         }
+            //         .wind4 {
+            //             margin-left: -2rem;
+            //         }
+            //     }
+            // }   
+            .aboutshapestation {
+                display: flex;
+                gap: 0.5rem;
+                overflow: hidden;
+
+
+                font-size: 17px;
                 color: rgb(179, 171, 171);
 
 
@@ -405,6 +424,7 @@
             margin-top: -1rem;
             margin-bottom: 4rem;
             transition: 0.3s ease-in;
+            background-color: rgba(25, 24, 24, 0.804);
             // border: solid;
 
             h2 {
@@ -540,12 +560,17 @@ const wind3 = ref(null);
 const wind4 = ref(null);
 
 
+const about = ref(null);
+const shapestation = ref(null);
+
+
 
 onMounted(() => {
   const tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'power.in()' } });
   const tl2 = gsap.timeline({ defaults: { duration: 0.4, ease: 'power.in()' } });
   const tl3 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
   const tl4 = gsap.timeline({ defaults: { duration: 5, ease: 'power.in()' } });
+  const tl5 = gsap.timeline({ defaults: { duration: 0.8, ease: 'power.in()' } });
 
   tl.from(first.value, { y: 80, delay: 0.06 });
   tl.from(second.value, { y: 80, delay: 0.09 }, '<'); // Add the second animation to start immediately after the first one
@@ -584,6 +609,10 @@ onMounted(() => {
   tl4.to(wind2.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
   tl4.to(wind3.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
   tl4.to(wind4.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
+
+
+  tl5.from(about.value, { y: 80, delay: 0.06 });
+  tl5.from(shapestation.value, { y: 80, delay: 0.09 }, '<'); // Add the second animation to start immediately after the first one
 
   ScrollTrigger.create({
     trigger: first.value,
@@ -635,6 +664,18 @@ onMounted(() => {
 
     
 
+  });
+
+  ScrollTrigger.create({
+    trigger: about.value,
+    start: '-1000% 60%',
+    end: '1000% 60%',
+    markers: true,
+    
+    animation: tl5,
+    onEnterBack: () => tl5.reverse(), 
+    onLeave: () => tl5.pause(), 
+    onEnter: () => tl5.play(),
   });
 
 

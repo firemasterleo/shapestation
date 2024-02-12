@@ -8,7 +8,7 @@
               <img src="./assets/unikmelogo.png" alt="proselogo">
           </div> -->
           <div class="name">
-            <h1>Shapestation Corp</h1>
+            <h1>Shapestation Inc</h1>
               <!-- <img src="./assets/unikmename.png" alt="proselogo"> -->
           </div>
           <div class="hamburger" :class="{ 'is-active': is_expanded }" @click="ToggleMenu">
