@@ -612,7 +612,7 @@ onMounted(() => {
 
 
   tl5.from(about.value, { y: 80, delay: 0.06 }, '<');
-  tl5.from(shapestation.value, { y: 80, delay: 0.09 },'<'); // Add the second animation to start immediately after the first one
+  tl5.from(shapestation.value, { y: 80, delay: 0.1 },'<'); // Add the second animation to start immediately after the first one
 
   ScrollTrigger.create({
     trigger: first.value,
