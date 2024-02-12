@@ -24,11 +24,36 @@
             <button class="button">Lets Get Started</button>
 
         </div>
-        <div class="cosmic">
-            <div class="planet1"></div>
-            <div class="planet1"></div>
-            <div class="planet1"></div>
-            <div class="planet1"></div>
+        <div class="herosliders">
+
+            <div class="slider1">
+                <div class="innerslider">
+                    <div class="first"></div>
+                    <div class="second"></div>
+                    <div class="third"></div>
+                </div>
+                <div class="innerslider">
+                    <div class="first"></div>
+                    <div class="second"></div>
+                    <div class="third"></div>
+                </div>
+            </div>
+
+            <div class="slider2">
+                <div class="innerslider">
+                    <div class="first"></div>
+                    <div class="second"></div>
+                    <div class="third"></div>
+                </div>
+                <div class="innerslider">
+                    <div class="first"></div>
+                    <div class="second"></div>
+                    <div class="third"></div>
+                </div>
+            </div>
+
+
+
         </div>
 
     </div>
@@ -210,6 +235,100 @@
                 font-weight: bolder;
                 // outline: none;
             }
+
+        }    .scroller {
+    width: 100%;
+    overflow-x: hidden ;
+    .topscroller {
+        // width: 100%;
+        width: 200rem;
+        overflow: hidden;
+        display: flex;
+        gap: 5rem;
+      }
+    
+      .innerscroller {
+        // width: 50rem;
+        display: flex;
+        gap: 5rem;
+        animation: scrollAnimation 10s linear infinite; /* Adjust duration and timing function as needed */
+      }
+    
+
+  }
+
+        .herosliders {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            // border: solid;
+            margin-top: 4rem;
+
+            @keyframes scrollAnimation {
+                0% {
+                transform: translateX(4%);
+                }
+                100% {
+                transform: translateX(-100%);
+                }
+            }
+            .slider1 {
+                display: flex;
+                overflow: hidden;
+                gap: 1rem;
+                .innerslider {
+                    display: flex;
+                    gap: 1rem;
+                    // overflow: hidden;
+                    animation: scrollAnimation 17s linear infinite; /* Adjust duration and timing function as needed */
+
+
+                    div {
+                        background-color: rgba(255, 255, 255, 0.078); /* Adjust the alpha value as needed */
+
+                        width: 8.5rem;
+                        height: 5.5rem;
+                        border: solid rgb(73, 82, 73);
+
+                    }
+                }
+
+            }
+
+            @keyframes scrollAnimation2 {
+                0% {
+                transform: translateX(-100%);
+                }
+                100% {
+                transform: translateX(4%);
+                }
+            }
+            .slider2 {
+                display: flex;
+                overflow: hidden;
+                gap: 1rem;
+
+                .innerslider {
+                    // border: solid;
+
+                    display: flex;
+                    gap: 1rem;
+                    // overflow: hidden;
+                    animation: scrollAnimation2 17s linear infinite; /* Adjust duration and timing function as needed */
+
+
+                    div {
+                        background-color: rgba(255, 255, 255, 0.078); /* Adjust the alpha value as needed */
+
+                        width: 8.5rem;
+                        height: 5.5rem;
+                        border: solid rgb(73, 82, 73);
+
+                    }
+                }
+
+            }
+
 
         }
     }
