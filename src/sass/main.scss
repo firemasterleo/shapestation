@@ -105,7 +105,7 @@
     
             }
             h1 {
-                color: white;
+                color: rgb(202, 196, 196);
                 margin-left: 1rem;
             }
     
@@ -127,7 +127,9 @@
                 .bar {
                     width: 20px;
                     height: 2px;
-                    background-color: #fafafa;
+                    background-color: rgb(202, 196, 196);
+
+
                     transition: transform 0.3s, opacity 0.3s;
                   }
                 &.is-active {
