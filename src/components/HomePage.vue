@@ -235,26 +235,6 @@
                 font-weight: bolder;
                 // outline: none;
             }
-
-        }    .scroller {
-    width: 100%;
-    overflow-x: hidden ;
-    .topscroller {
-        // width: 100%;
-        width: 200rem;
-        overflow: hidden;
-        display: flex;
-        gap: 5rem;
-      }
-    
-      .innerscroller {
-        // width: 50rem;
-        display: flex;
-        gap: 5rem;
-        animation: scrollAnimation 10s linear infinite; /* Adjust duration and timing function as needed */
-      }
-    
-
   }
 
         .herosliders {
@@ -280,7 +260,7 @@
                     display: flex;
                     gap: 1rem;
                     // overflow: hidden;
-                    animation: scrollAnimation 17s linear infinite; /* Adjust duration and timing function as needed */
+                    animation: scrollAnimation 25s linear infinite; /* Adjust duration and timing function as needed */
 
 
                     div {
@@ -314,7 +294,7 @@
                     display: flex;
                     gap: 1rem;
                     // overflow: hidden;
-                    animation: scrollAnimation2 17s linear infinite; /* Adjust duration and timing function as needed */
+                    animation: scrollAnimation2 25s linear infinite; /* Adjust duration and timing function as needed */
 
 
                     div {
