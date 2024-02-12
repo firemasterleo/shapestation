@@ -668,13 +668,13 @@ onMounted(() => {
 
   ScrollTrigger.create({
     trigger: about.value,
-    start: 'top 90%',
-    end: 'bottom 90%',
+    start: 'top 95%',
+    end: 'bottom 95%',
     markers: true,
     
     animation: tl5,
-    onEnterBack: () => tl5.reverse(), 
-    onLeave: () => tl5.pause(), 
+    // onEnterBack: () => tl5.reverse(), 
+    // onLeave: () => tl5.pause(), 
     onEnter: () => tl5.play(),
   });
 
