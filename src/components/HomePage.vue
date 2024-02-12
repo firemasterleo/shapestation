@@ -12,12 +12,12 @@
         <div class="heroheading">
    
             <div class="line1">
-                <h1 ref="first">Creative </h1> 
-                <h1 ref="second">And</h1>
-                <h1 ref="third">Easy</h1>
+                <h1 ref="first">Digital </h1> 
+                <h1 ref="second">Tools</h1>
+                <h1 ref="third">For</h1>
             </div>
             <div class="line2">
-                <h1 ref="fourth">Web</h1>
+                <h1 ref="fourth">Brand</h1>
                 <h1 ref="fifth">Development</h1>
             </div>
             <p>To suit and serve your brand, we build Modern, smoothe and intuitive webpages that are easy to navigate, guranteed to give your Users a great experience.</p>
@@ -28,27 +28,27 @@
 
             <div class="slider1">
                 <div class="innerslider">
-                    <div class="first"></div>
-                    <div class="second"></div>
-                    <div class="third"></div>
+                    <div class="first"><h5>Website/Webapp Development</h5> </div>
+                    <div class="second"><h5>App Development</h5> </div>
+                    <div class="third"><h5>Digital Marketing</h5></div>
                 </div>
                 <div class="innerslider">
-                    <div class="first"></div>
-                    <div class="second"></div>
-                    <div class="third"></div>
+                    <div class="first"><h5>Website/Webapp Development</h5></div>
+                    <div class="second"><h5>App Development</h5></div>
+                    <div class="third"><h5>Digital Marketing</h5></div>
                 </div>
             </div>
 
             <div class="slider2">
                 <div class="innerslider">
-                    <div class="first"></div>
-                    <div class="second"></div>
-                    <div class="third"></div>
+                    <div class="first"><h5>Shapestation Africa</h5></div>
+                    <div class="second"><h5>Brand image Designing</h5></div>
+                    <div class="third"><h5>UI/UX</h5></div>
                 </div>
                 <div class="innerslider">
-                    <div class="first"></div>
-                    <div class="second"></div>
-                    <div class="third"></div>
+                    <div class="first"><h5>Shapestation Africa</h5></div>
+                    <div class="second"><h5>Brand Image Designing</h5></div>
+                    <div class="third"><h5>UI/UX</h5></div>
                 </div>
             </div>
 
@@ -279,11 +279,20 @@
 
 
                     div {
-                        background-color: rgba(255, 255, 255, 0.078); /* Adjust the alpha value as needed */
+                        display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(255, 255, 255, 0.078); /* Adjust the alpha value as needed */
+                    
+                    width: 8.5rem;
+                    height: 5.5rem;
+                    border: solid rgba(73, 82, 73, 0.765);
+                    
+                    h5 {
+                            font-size: 15px;
+                            color: rgba(255, 255, 255, 0.724);
 
-                        width: 8.5rem;
-                        height: 5.5rem;
-                        border: solid rgba(73, 82, 73, 0.765);
+                        }
 
                     }
                 }
@@ -307,17 +316,28 @@
                     // border: solid;
 
                     display: flex;
+
                     gap: 1rem;
                     // overflow: hidden;
                     animation: scrollAnimation2 25s linear infinite; /* Adjust duration and timing function as needed */
 
 
                     div {
+                        display: flex;
+                    justify-content: center;
+                    align-items: center;
                         background-color: rgba(255, 255, 255, 0.078); /* Adjust the alpha value as needed */
 
                         width: 8.5rem;
                         height: 5.5rem;
                         border: solid rgba(225, 83, 244, 0.123);
+
+                                            
+                    h5 {
+                            font-size: 15px;
+                            color: rgba(255, 255, 255, 0.724);
+
+                        }
 
                     }
                 }
