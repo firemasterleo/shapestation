@@ -8,7 +8,7 @@
               <img src="./assets/unikmelogo.png" alt="proselogo">
           </div> -->
           <div class="name">
-            <h1>Shapestation Africa</h1>
+            <h1>Shapestation Corp</h1>
               <!-- <img src="./assets/unikmename.png" alt="proselogo"> -->
           </div>
           <div class="hamburger" :class="{ 'is-active': is_expanded }" @click="ToggleMenu">
@@ -171,7 +171,7 @@ const restoreScrollPosition = () => {
   const storedPosition = localStorage.getItem('scrollPosition');
   if (storedPosition !== null) {
     scrollPosition = parseInt(storedPosition);
-    window.scrollTo(0, scrollPosition);
+    window.scroll(0, scrollPosition);
   }
 };
 

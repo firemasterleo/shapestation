@@ -637,7 +637,7 @@ const restoreScrollPosition = () => {
   const storedPosition = localStorage.getItem('scrollPosition');
   if (storedPosition !== null) {
     scrollPosition = parseInt(storedPosition);
-    window.scrollTo(0, scrollPosition);
+    window.scroll(0, scrollPosition);
   }
 };
 
