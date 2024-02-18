@@ -13,7 +13,7 @@
    
             <div class="line1">
                 <h1 ref="first">Digital </h1> 
-                <h1 ref="second">Tools</h1>
+                <h1 ref="second">Solutions</h1>
                 <h1 ref="third">For</h1>
             </div>
             <div class="line2">
@@ -21,8 +21,10 @@
                 <h1 ref="fifth">Development</h1>
             </div>
             <p>To suit and serve your brand, we build Modern, smoothe and intuitive webpages that are easy to navigate, guranteed to give your Users a great experience.</p>
-            <button class="button">Lets Get Started</button>
-
+            <div class="buttons">
+                <button class="button">About us</button>
+                <button class="button">Our Services</button>                
+            </div>
         </div>
         <div class="herosliders">
 
@@ -49,6 +51,19 @@
                     <div class="first"><h5>Shapestation Africa</h5></div>
                     <div class="second"><h5>Brand Image Designing</h5></div>
                     <div class="third"><h5>UI/UX</h5></div>
+                </div>
+            </div>
+
+            <div class="slider3">
+                <div class="innerslider">
+                    <div class="first"><h5>Website/Webapp Development</h5> </div>
+                    <div class="second"><h5>App Development</h5> </div>
+                    <div class="third"><h5>Digital Marketing</h5></div>
+                </div>
+                <div class="innerslider">
+                    <div class="first"><h5>Website/Webapp Development</h5></div>
+                    <div class="second"><h5>App Development</h5></div>
+                    <div class="third"><h5>Digital Marketing</h5></div>
                 </div>
             </div>
 
@@ -265,22 +280,26 @@
                 text-align: center;
                 color: rgb(202, 196, 196);
             }
-            .button {
-                width: 14rem;
-                font-size: 20px;
-                font-weight: 700;
-                padding: 0.4rem;
-                border-color: rgba(255, 255, 255, 0.326);
-                border-top-color: rgba(111, 159, 96, 0.42) ;
-                border-bottom-color: rgba(225, 83, 244, 0.468) ;
-                border-left-color: rgb(73, 82, 73);
-                border-right-color:rgba(225, 83, 244, 0.468) ;
-                margin-left: 0.6rem;
-                background-color: rgba(105, 109, 100, 0.185);
-                border-radius: 2rem;
-                color: rgb(202, 196, 196);
-                font-weight: bolder;
-                // outline: none;
+            .buttons {
+                display: flex;
+                .button {
+                    width: 9rem;
+                    font-size: 20px;
+                    font-weight: 700;
+                    padding: 0.4rem;
+                    border-color: rgba(255, 255, 255, 0.326);
+                    border-top-color: rgba(111, 159, 96, 0.42) ;
+                    border-bottom-color: rgba(225, 83, 244, 0.468) ;
+                    border-left-color: rgb(73, 82, 73);
+                    border-right-color:rgba(225, 83, 244, 0.468) ;
+                    margin-left: 0.6rem;
+                    background-color: rgba(105, 109, 100, 0.185);
+                    border-radius: 2rem;
+                    color: rgb(202, 196, 196);
+                    font-weight: bolder;
+                    // outline: none;
+                }
+
             }
   }
 
@@ -381,6 +400,49 @@
                     }
                 }
 
+            }
+            .slider3 {
+                display: flex;
+                overflow: hidden;
+                gap: 1rem;
+                box-shadow: -2px 0 50px rgba(0, 0, 0, 0.699); /* Apply a box shadow to the left side */
+
+                .innerslider {
+                    display: flex;
+                    gap: 1rem;
+                    // overflow: hidden;
+                    animation: scrollAnimation 35s linear infinite; /* Adjust duration and timing function as needed */
+
+
+                    div {
+                        display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(255, 255, 255, 0.078); /* Adjust the alpha value as needed */
+                    
+                    width: 8.5rem;
+                    height: 4.5rem;
+                    border: solid rgba(73, 82, 73, 0.765);
+                    border-radius: 1rem;
+                    
+                    h5 {
+                            font-size: 15px;
+                            color: rgba(255, 255, 255, 0.724);
+
+                        }
+
+                    }
+                }
+
+            }
+
+            @keyframes scrollAnimation2 {
+                0% {
+                transform: translateX(-100%);
+                }
+                100% {
+                transform: translateX(4%);
+                }
             }
 
 
