@@ -878,6 +878,33 @@ window.removeEventListener('scroll', handleScroll);
 
 
 
+let scrollPosition = 0;
+
+const saveScrollPosition = () => {
+  scrollPosition = window.scrollY;
+  Cookies.set('scrollPosition', scrollPosition.toString());
+};
+
+const restoreScrollPosition = () => {
+  const storedPosition = Cookies.get('scrollPosition');
+  if (storedPosition !== null) {
+    scrollPosition = parseInt(storedPosition);
+    window.scroll(0, scrollPosition);
+  }
+};
+
+// Save scroll position just before the page is unloaded (refreshed)
+window.addEventListener('beforeunload', saveScrollPosition);
+
+// Restore scroll position when the page is loaded again after a refresh
+onMounted(() => {
+  restoreScrollPosition();
+});
+
+// Cleanup the event listener when the component is unmounted
+onBeforeUnmount(() => {
+  window.removeEventListener('beforeunload', saveScrollPosition);
+}); 
 
 
 
