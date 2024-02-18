@@ -1,4 +1,6 @@
 <template>
+    <LenisScroll/>
+
     <div class="mainveil" :class="{ 'is-expanded': is_expanded }" @click="ToggleMenu"></div>
     
     <!-- for headers to work well with scrolling they need to be free within the template not within a div -->
@@ -8,7 +10,7 @@
               <img src="./assets/unikmelogo.png" alt="proselogo">
           </div> -->
           <div class="name">
-            <h1>Shapestation Inc</h1>
+            <h1>VIE MODERNE</h1>
               <!-- <img src="./assets/unikmename.png" alt="proselogo"> -->
           </div>
           <div class="hamburger" :class="{ 'is-active': is_expanded }" @click="ToggleMenu">
@@ -23,13 +25,24 @@
     </div>
     <div class="menuslidelist" :class="{ 'is-expanded': is_expanded }">
 
-        <div class="home" >
+      <div class="home" >
+      
+      <router-link class="menuitem" to="/" @click="ToggleMenu">
+      <h3>Home</h3>
+      </router-link>
+      
+      </div>
 
-    <router-link class="menuitem" to="/TextSlideUp" @click="ToggleMenu">
-  <h3>Home</h3>
+        <div class="interior">
+
+    <router-link class="menuitem" to="/InteriorPage" @click="ToggleMenu">
+  <h3>IntetiorPage</h3>
    </router-link>
 
+
+
 </div>
+
     
     
 </div>
@@ -84,6 +97,8 @@
 </style>
 
 <script setup>
+import LenisScroll from './components/LenisScroll.vue';
+
 import { ref, onMounted, onBeforeUnmount, onUnmounted } from 'vue';
 
 
@@ -186,7 +201,8 @@ onMounted(() => {
 // Cleanup the event listener when the component is unmounted
 onBeforeUnmount(() => {
   window.removeEventListener('beforeunload', saveScrollPosition);
-});
+}); 
+
 
 
 

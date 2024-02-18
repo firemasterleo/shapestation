@@ -59,7 +59,7 @@
     </div>
     <div class="section2">
         
-        <div class="review1">
+        <div class="about">
             <!-- <div class="rocket">
                 <div class="svg" ref="svg">
                     <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path d="M15.78 15.84S18.64 13 19.61 12c3.07-3 1.54-9.18 1.54-9.18S15 1.29 12 4.36C9.66 6.64 8.14 8.22 8.14 8.22S4.3 7.42 2 9.72L14.25 22c2.3-2.33 1.53-6.16 1.53-6.16zm-1.5-9a2 2 0 0 1 2.83 0 2 2 0 1 1-2.83 0zM3 21a7.81 7.81 0 0 0 5-2l-3-3c-2 1-2 5-2 5z"/></svg>
@@ -89,14 +89,13 @@
             <p>  We're a team of passionate and creative individuals and our mission is simple: to empower businesses with the tools they need to thrive in an ever-evolving digital landscape.
                 <br><br> We're here to enhance your online presence and help you stand out in a crowded digital marketplace
             </p>
-                  <div class="svg"></div>
-                  <div class="portfolio" :class="{ 'is-portfolioexpanded': is_portfolioexpanded }" @click="TogglePortfolio">
+                  <!-- <div class="portfolio" :class="{ 'is-portfolioexpanded': is_portfolioexpanded }" @click="TogglePortfolio">
                     <h2>Portfolio</h2>
                     <svg :class="{ 'is-portfolioexpanded': is_portfolioexpanded }" xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='34' height='34'><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>
                              
-                </div>
+                </div> -->
         </div>
-        <!-- <div class="review">
+        <div class="Our services">
 
             <div class="svg"></div>
             <h2>Contact Us</h2>
@@ -113,7 +112,7 @@
                  Placeat commodi ipsa modi amet exercitationem cum
                   voluptate, sint enim esse culpa, mollitia vitae in dolore nobis facilis provident, aperiam rem explicabo?</p>
                   <div class="svg"></div>
-        </div> -->
+        </div>
         <!-- <div class="tools">
             <div class="circle"></div>
             <div class="svg">
@@ -150,8 +149,38 @@
 
         </div> -->
         </div>
-        <div class="section3">
-            <h2>hello</h2>
+        <!-- <div class="section3">
+        </div> -->
+        <div class="section4">
+            <div class="veil"></div>
+
+            <div class="leftsection">
+
+                    <h1 class="top">VIE MODERNE</h1>
+                    <h1 class="bottom">VIE MODERNE</h1>
+                    <p>your space, your personality</p>
+                    <button>Order a Project</button>
+                </div>
+                <div class="contact">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+
+            <div class="rightsection">
+                <div class="image">
+                    <img src="../assets/interiorimage1.jpeg" alt="">
+                </div>
+                <div class="smallbox">
+                    <h2></h2>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <button>DISCOVER MORE</button>
+                </div>
+
+            </div>
         </div>
 
 
@@ -170,13 +199,17 @@
 <style lang="scss" scoped>
 .bodysection {
     height: fit-content;
-    // border: solid;
+    overflow: hidden;
+    border: solid;
+    width: 98.8vw;
+    position: relative;
 
     .image {
         height: 45rem;
-        width: 100vw;
+        width: 100%;
         position: absolute;
         z-index: -1;
+        // border: solid green;
 
         img {
             height: 100%;
@@ -196,6 +229,7 @@
         padding-right: 1.5rem;
         padding-top: 3rem;
          position: relative;
+         overflow: hidden;
 
 
 
@@ -275,7 +309,7 @@
                     display: flex;
                     gap: 1rem;
                     // overflow: hidden;
-                    animation: scrollAnimation 25s linear infinite; /* Adjust duration and timing function as needed */
+                    animation: scrollAnimation 30s linear infinite; /* Adjust duration and timing function as needed */
 
 
                     div {
@@ -285,8 +319,9 @@
                     background-color: rgba(255, 255, 255, 0.078); /* Adjust the alpha value as needed */
                     
                     width: 8.5rem;
-                    height: 5.5rem;
+                    height: 4.5rem;
                     border: solid rgba(73, 82, 73, 0.765);
+                    border-radius: 1rem;
                     
                     h5 {
                             font-size: 15px;
@@ -311,6 +346,8 @@
                 display: flex;
                 overflow: hidden;
                 gap: 1rem;
+                box-shadow: -50rem 0 -40px rgba(0, 0, 0, 0.877); /* Apply a box shadow to the left side */
+
 
                 .innerslider {
                     // border: solid;
@@ -319,7 +356,7 @@
 
                     gap: 1rem;
                     // overflow: hidden;
-                    animation: scrollAnimation2 25s linear infinite; /* Adjust duration and timing function as needed */
+                    animation: scrollAnimation2 30s linear infinite; /* Adjust duration and timing function as needed */
 
 
                     div {
@@ -329,8 +366,10 @@
                         background-color: rgba(255, 255, 255, 0.078); /* Adjust the alpha value as needed */
 
                         width: 8.5rem;
-                        height: 5.5rem;
+                        height: 4.5rem;
                         border: solid rgba(225, 83, 244, 0.123);
+                        border-radius: 1rem;
+
 
                                             
                     h5 {
@@ -357,6 +396,7 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            height: 30rem;
             padding-top: 2rem;
             position: relative;
             z-index: 0;
@@ -533,6 +573,64 @@
   height: 60rem; /* Adjust height as needed */
   background-color: #333; /* Adjust color */
   clip-path: polygon(200% 0%, 100% 0%, 100% 100%, -1000% 100%); 
+
+    }
+
+    .section4 {
+        border: solid green;
+        display: flex;
+
+
+        .veil {
+            position: relative;
+            z-index: 100;
+            border: green;
+            background-color: #000000;
+        }
+
+        .leftsection {
+            position: relative;
+            padding-top: 10rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 39vw;
+            border: solid rgb(50, 50, 255);
+            
+
+            .top {
+                position: relative;
+                left: 6.6rem;
+                margin: -3rem;
+                color: rgba(192, 192, 192, 0.064);
+
+
+            }
+
+            .bottom {
+                position: relative;
+                // top: 5.3rem;
+                left: 4.4rem;
+                // border: solid;
+
+                // color: rgba(192, 192, 192, 0.114);
+            }
+        }
+        .rightsection {
+            width: 58.8vw;
+            height: 90vh;
+            border: solid red;
+
+
+            .image {
+                width: 100%;
+
+                object-fit: cover;
+                img {
+                    width: 100%;
+                }
+            }
+        }
 
     }
  }
@@ -781,38 +879,6 @@ window.removeEventListener('scroll', handleScroll);
 
 
 
-
-
-
-
-
-let scrollPosition = 0;
-
-const saveScrollPosition = () => {
-  scrollPosition = window.scrollY;
-  localStorage.setItem('scrollPosition', scrollPosition.toString());
-};
-
-const restoreScrollPosition = () => {
-  const storedPosition = localStorage.getItem('scrollPosition');
-  if (storedPosition !== null) {
-    scrollPosition = parseInt(storedPosition);
-    window.scroll(0, scrollPosition);
-  }
-};
-
-// Save scroll position just before the page is unloaded (refreshed)
-window.addEventListener('beforeunload', saveScrollPosition);
-
-// Restore scroll position when the page is loaded again after a refresh
-onMounted(() => {
-  restoreScrollPosition();
-});
-
-// Cleanup the event listener when the component is unmounted
-onBeforeUnmount(() => {
-  window.removeEventListener('beforeunload', saveScrollPosition);
-});
 
 
 </script>

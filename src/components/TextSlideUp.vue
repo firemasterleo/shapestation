@@ -155,35 +155,6 @@ ScrollTrigger.create({
 });
 
 
-// this code is for maintaining scroll position upon refresh
-// also note that the code will not work with mounting router in the main .js 
-let scrollPosition = 0;
-
-const saveScrollPosition = () => {
-  scrollPosition = window.scrollY;
-  localStorage.setItem('scrollPosition', scrollPosition.toString());
-};
-
-const restoreScrollPosition = () => {
-  const storedPosition = localStorage.getItem('scrollPosition');
-  if (storedPosition !== null) {
-    scrollPosition = parseInt(storedPosition);
-    window.scrollTo(0, scrollPosition);
-  }
-};
-
-// Save scroll position just before the page is unloaded (refreshed)
-window.addEventListener('beforeunload', saveScrollPosition);
-
-// Restore scroll position when the page is loaded again after a refresh
-onMounted(() => {
-  restoreScrollPosition();
-});
-
-// Cleanup the event listener when the component is unmounted
-onBeforeUnmount(() => {
-  window.removeEventListener('beforeunload', saveScrollPosition);
-});
 // gsap.to('.bodysection img', {
 //     y: '50%', // Adjust the percentage for the parallax speed
 //     ease: 'none',
