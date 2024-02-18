@@ -176,19 +176,15 @@ onUnmounted(() => {
 });
 
 
-
 let scrollPosition = 0;
 
 const saveScrollPosition = () => {
   scrollPosition = window.scrollY;
-  const url = new URL(window.location.href);
-  url.searchParams.set('scrollPosition', scrollPosition.toString());
-  window.history.replaceState({}, '', url.toString());
+  localStorage.setItem('scrollPosition', scrollPosition.toString());
 };
 
 const restoreScrollPosition = () => {
-  const url = new URL(window.location.href);
-  const storedPosition = url.searchParams.get('scrollPosition');
+  const storedPosition = localStorage.getItem('scrollPosition');
   if (storedPosition !== null) {
     scrollPosition = parseInt(storedPosition);
     window.scrollTo(0, scrollPosition);
@@ -199,16 +195,20 @@ const restoreScrollPosition = () => {
 window.addEventListener('beforeunload', saveScrollPosition);
 
 // Restore scroll position when the page is loaded again after a refresh
+window.addEventListener('load', restoreScrollPosition);
+
+// Cleanup the event listener when the component is unmounted
+const unmountHandler = () => {
+  window.removeEventListener('beforeunload', saveScrollPosition);
+};
+
 onMounted(() => {
   restoreScrollPosition();
 });
 
-// Cleanup the event listener when the component is unmounted
 onBeforeUnmount(() => {
-  window.removeEventListener('beforeunload', saveScrollPosition);
+  unmountHandler();
 });
-
-
 
 
 
