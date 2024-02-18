@@ -879,11 +879,11 @@ let scrollPosition = 0;
 
 const saveScrollPosition = () => {
   scrollPosition = window.scrollY;
-  localStorage.setItem('scrollPosition', scrollPosition.toString());
+  sessionStorage.setItem('scrollPosition', scrollPosition.toString());
 };
 
 const restoreScrollPosition = () => {
-  const storedPosition = localStorage.getItem('scrollPosition');
+  const storedPosition = sessionStorage.getItem('scrollPosition');
   if (storedPosition !== null) {
     scrollPosition = parseInt(storedPosition);
     window.scroll(0, scrollPosition);
