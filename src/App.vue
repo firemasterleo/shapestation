@@ -181,11 +181,11 @@ let scrollPosition = 0;
 
 const saveScrollPosition = () => {
   scrollPosition = window.scrollY;
-  sessionStorage.setItem('scrollPosition', scrollPosition.toString());
+  Cookies.set('scrollPosition', scrollPosition.toString());
 };
 
 const restoreScrollPosition = () => {
-  const storedPosition = sessionStorage.getItem('scrollPosition');
+  const storedPosition = Cookies.get('scrollPosition');
   if (storedPosition !== null) {
     scrollPosition = parseInt(storedPosition);
     window.scroll(0, scrollPosition);
