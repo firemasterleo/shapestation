@@ -877,19 +877,21 @@ window.removeEventListener('scroll', handleScroll);
 
 
 
-
 let scrollPosition = 0;
 
 const saveScrollPosition = () => {
   scrollPosition = window.scrollY;
-  Cookies.set('scrollPosition', scrollPosition.toString());
+  const url = new URL(window.location.href);
+  url.searchParams.set('scrollPosition', scrollPosition.toString());
+  window.history.replaceState({}, '', url.toString());
 };
 
 const restoreScrollPosition = () => {
-  const storedPosition = Cookies.get('scrollPosition');
+  const url = new URL(window.location.href);
+  const storedPosition = url.searchParams.get('scrollPosition');
   if (storedPosition !== null) {
     scrollPosition = parseInt(storedPosition);
-    window.scroll(0, scrollPosition);
+    window.scrollTo(0, scrollPosition);
   }
 };
 
@@ -904,9 +906,7 @@ onMounted(() => {
 // Cleanup the event listener when the component is unmounted
 onBeforeUnmount(() => {
   window.removeEventListener('beforeunload', saveScrollPosition);
-}); 
-
-
+});
 
 
 
