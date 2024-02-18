@@ -97,6 +97,8 @@
 </style>
 
 <script setup>
+import iScroll from 'iscroll';
+
 import LenisScroll from './components/LenisScroll.vue';
 
 import { ref, onMounted, onBeforeUnmount, onUnmounted } from 'vue';
@@ -175,39 +177,42 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 
+let myScroll;
 
-let scrollPosition = 0;
+const initScroll = () => {
+  myScroll = new iScroll('#wrapper', {
+    // Configurations for iScroll
+    scrollX: false, // Disable horizontal scrolling
+    scrollY: true, // Enable vertical scrolling
+    momentum: true, // Enable momentum scrolling
+    snap: false, // Disable snapping to elements
+    // Add more configurations as needed
+  });
+};
 
 const saveScrollPosition = () => {
-  scrollPosition = window.scrollY;
-  localStorage.setItem('scrollPosition', scrollPosition.toString());
+  localStorage.setItem('scrollPosition', myScroll.y);
 };
 
 const restoreScrollPosition = () => {
   const storedPosition = localStorage.getItem('scrollPosition');
   if (storedPosition !== null) {
-    scrollPosition = parseInt(storedPosition);
-    window.scrollTo(0, scrollPosition);
+    myScroll.scrollTo(0, parseInt(storedPosition), 0);
   }
 };
+
+// Initialize iScroll when the page is loaded
+window.addEventListener('load', () => {
+  initScroll();
+  restoreScrollPosition();
+});
 
 // Save scroll position just before the page is unloaded (refreshed)
 window.addEventListener('beforeunload', saveScrollPosition);
 
-// Restore scroll position when the page is loaded again after a refresh
-window.addEventListener('load', restoreScrollPosition);
-
-// Cleanup the event listener when the component is unmounted
-const unmountHandler = () => {
-  window.removeEventListener('beforeunload', saveScrollPosition);
-};
-
-onMounted(() => {
-  restoreScrollPosition();
-});
-
+// Cleanup iScroll instance when the component is unmounted
 onBeforeUnmount(() => {
-  unmountHandler();
+  myScroll.destroy();
 });
 
 
