@@ -13,6 +13,7 @@
 
 
 
+
      .mainveil {
         width: 100vw;
         height: 130vh;
@@ -38,6 +39,7 @@
     }
     
     .headercontainer {
+        margin-top: 4rem;
         position: sticky;
         top: 0;
         z-index: 20;
@@ -162,7 +164,8 @@
     }
         .bottommenuslide {
             position: fixed;
-            top: 71%;
+            // top: 71%;
+            bottom: 7rem;
             background-color: rgb(75, 86, 72);
             padding-left: 1.5rem;
             border-top-right-radius: 1rem;

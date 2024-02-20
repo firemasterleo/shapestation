@@ -1,5 +1,6 @@
 <template>
     <LenisScroll/>
+    <div class="iphone14topspace"></div>
 
     <div class="mainveil" :class="{ 'is-expanded': is_expanded }" @click="ToggleMenu"></div>
     
