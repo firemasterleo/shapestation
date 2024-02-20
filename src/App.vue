@@ -4,8 +4,8 @@
     <div class="mainveil" :class="{ 'is-expanded': is_expanded }" @click="ToggleMenu"></div>
     
     <!-- for headers to work well with scrolling they need to be free within the template not within a div -->
-    <div class="headercontainer" :class="{ 'ishidingheader': isHidingHeader && !isScrollingUp }, { 'is-expanded': is_expanded }"> 
-      <div class="header"> 
+    <div class="headercontainer" :class="{ 'ishidingheader': isHidingHeader && !isScrollingUp }"> 
+      <div class="header" :class="{ 'is-expanded': is_expanded }"> 
           <!-- <div class="logo">
               <img src="./assets/unikmelogo.png" alt="proselogo">
           </div> -->
@@ -46,6 +46,13 @@
     
     
 </div>
+
+    <div class="bottommenuslide" :class="{ 'is-expanded': is_expanded }">
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+    </div>
 
 
 
