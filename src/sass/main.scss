@@ -72,6 +72,11 @@
                 background-color: #ffffff00;
                 transition: background-color 0.2s ease-in;
 
+                h1 {
+                    color: rgb(7, 7, 7);
+
+                }
+
             }
     
             .logo {
@@ -127,7 +132,7 @@
                 gap: 0.3rem;
                 justify-content: center;
                 background-color: none;
-                align-items: center ;
+                align-items: center;
                 cursor: pointer;
     
                 width: 4rem;
@@ -145,12 +150,19 @@
                     transition: transform 0.3s, opacity 0.3s;
                   }
                 &.is-active {
+                    
                     .bar:nth-child(1) {
+                        background-color: rgb(41, 40, 40);
+
                         transform: translateY(8px) rotate(45deg);
                       }
                     .bar:nth-child(2) {
+                        background-color: rgb(41, 40, 40);
+
                         opacity: 0; }
                     .bar:nth-child(3) {
+                        background-color: rgb(41, 40, 40);
+
                         transform: translateY(-6px) rotate(-45deg);
                     }
     
@@ -174,7 +186,7 @@
         // border: solid red;
 
         .topmenuslide {
-            background-color: rgb(18, 18, 17);
+            background-color: rgb(94, 94, 85);
             width: 100%;
             transform: translateX(-100%);
             height: 75%;
