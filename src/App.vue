@@ -24,38 +24,34 @@
 
     
     </div>
-    <div class="menuslidelist" :class="{ 'is-expanded': is_expanded }">
+    <div class="menuslide">
 
-      <div class="home" >
-      
-      <router-link class="menuitem" to="/" @click="ToggleMenu">
-      <h3>Home</h3>
-      </router-link>
-      
-      </div>
+      <div class="topmenuslide" :class="{ 'is-expanded': is_expanded }">
+  
+        <div class="home" >
+            <router-link class="menuitem" to="/" @click="ToggleMenu">
+              <h3>Home</h3>
+            </router-link>
+         </div>
+  
+          <div class="interior">
+            <router-link class="menuitem" to="/InteriorPage" @click="ToggleMenu">
+              <h3>IntetiorPage</h3>
+            </router-link>
+          </div>
+  
+  </div>
+  
+  
+  <div class="bottommenuslide" :class="{ 'is-expanded': is_expanded }">
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+  </div>
 
-        <div class="interior">
 
-    <router-link class="menuitem" to="/InteriorPage" @click="ToggleMenu">
-  <h3>IntetiorPage</h3>
-   </router-link>
-
-
-
-</div>
-
-    
-    
-</div>
-
-
-<div class="bottommenuslide" :class="{ 'is-expanded': is_expanded }">
-  <p>hello</p>
-  <p>hello</p>
-  <p>hello</p>
-  <p>hello</p>
-</div>
-
+    </div>  
 
 
 
