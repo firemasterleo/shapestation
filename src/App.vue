@@ -47,12 +47,14 @@
     
 </div>
 
-    <div class="bottommenuslide" :class="{ 'is-expanded': is_expanded }">
-      <p>hello</p>
-      <p>hello</p>
-      <p>hello</p>
-      <p>hello</p>
-    </div>
+
+<div class="bottommenuslide" :class="{ 'is-expanded': is_expanded }">
+  <p>hello</p>
+  <p>hello</p>
+  <p>hello</p>
+  <p>hello</p>
+</div>
+
 
 
 
