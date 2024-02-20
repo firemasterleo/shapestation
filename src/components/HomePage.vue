@@ -126,6 +126,7 @@
     width: 100vw;
     position: relative;
 
+
     .image {
         height: 45rem;
         width: 100%;

@@ -55,8 +55,10 @@
 
 
 
+      <div class="routersection" :class="{ 'is-expanded': is_expanded }">
+        <router-view/>
 
-  <router-view/>
+      </div>
 
 
 
@@ -124,7 +126,6 @@ const ToggleMenu = () => {
 }
 
 
-
 //headerbehaviour logic
 const isAtTop = ref(true);
 const isHidingHeader = ref(false);
@@ -183,43 +184,43 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 
-let myScroll;
+// let myScroll;
 
-const initScroll = () => {
-  myScroll = new iScroll('#wrapper', {
-    // Configurations for iScroll
-    scrollX: false, // Disable horizontal scrolling
-    scrollY: true, // Enable vertical scrolling
-    momentum: true, // Enable momentum scrolling
-    snap: false, // Disable snapping to elements
-    // Add more configurations as needed
-  });
-};
+// const initScroll = () => {
+//   myScroll = new iScroll('#wrapper', {
+//     // Configurations for iScroll
+//     scrollX: false, // Disable horizontal scrolling
+//     scrollY: true, // Enable vertical scrolling
+//     momentum: true, // Enable momentum scrolling
+//     snap: false, // Disable snapping to elements
+//     // Add more configurations as needed
+//   });
+// };
 
-const saveScrollPosition = () => {
-  localStorage.setItem('scrollPosition', myScroll.y);
-};
+// const saveScrollPosition = () => {
+//   localStorage.setItem('scrollPosition', myScroll.y);
+// };
 
-const restoreScrollPosition = () => {
-  const storedPosition = localStorage.getItem('scrollPosition');
-  if (storedPosition !== null) {
-    myScroll.scrollTo(0, parseInt(storedPosition), 0);
-  }
-};
+// const restoreScrollPosition = () => {
+//   const storedPosition = localStorage.getItem('scrollPosition');
+//   if (storedPosition !== null) {
+//     myScroll.scrollTo(0, parseInt(storedPosition), 0);
+//   }
+// };
 
-// Initialize iScroll when the page is loaded
-window.addEventListener('load', () => {
-  initScroll();
-  restoreScrollPosition();
-});
+// // Initialize iScroll when the page is loaded
+// window.addEventListener('load', () => {
+//   initScroll();
+//   restoreScrollPosition();
+// });
 
-// Save scroll position just before the page is unloaded (refreshed)
-window.addEventListener('beforeunload', saveScrollPosition);
+// // Save scroll position just before the page is unloaded (refreshed)
+// window.addEventListener('beforeunload', saveScrollPosition);
 
-// Cleanup iScroll instance when the component is unmounted
-onBeforeUnmount(() => {
-  myScroll.destroy();
-});
+// // Cleanup iScroll instance when the component is unmounted
+// onBeforeUnmount(() => {
+//   myScroll.destroy();
+// });
 
 
 
