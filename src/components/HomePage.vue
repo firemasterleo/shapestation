@@ -361,7 +361,7 @@
     }
     .section2 {
         padding-inline: 1.2rem;
-        background-color: rgba(0, 0, 0, 0.342);
+        background-color: rgb(32, 31, 31);
         height: 40rem;
         display: flex;
         flex-direction: column;
