@@ -40,9 +40,9 @@
     .headercontainer {
         position: sticky;
         top: 0;
-        z-index: 100;
+        z-index: 20;
         overflow-x: hidden;
-        width: 98.8vw;
+        width: 100vw;
         transition: all 0.25s ease-in;
 
 
@@ -111,6 +111,8 @@
     
             .hamburger {
                 // border: solid;
+                position: relative;
+                z-index: 20;
 
                 display: flex;
                 flex-direction: column;
@@ -154,20 +156,21 @@
     }
         .menuslidelist {
             position: fixed;
-            background-color: rgb(24, 23, 23);
+            top: 0;
+            background-color: rgb(18, 17, 17);
             width: 98.8%;
             transform: translateX(-100%);
             height: 70vh;
             // opacity: 0;
+            padding-top: 6rem;
             padding-left: 1.5rem;
-            padding-top: 1rem;
             border-top-right-radius: 1rem;
             border-bottom-right-radius: 1rem;
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
             overflow-y: hidden;
-            z-index: 12;
+            z-index: 19;
             transition: transform 0.3s cubic-bezier(0.36, 0.66, 0.04, 1), opacity 0.5s;
     
             &.is-expanded {

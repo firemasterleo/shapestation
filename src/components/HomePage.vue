@@ -123,7 +123,7 @@
     height: fit-content;
     overflow: hidden;
     border: solid;
-    width: 98.8vw;
+    width: 100vw;
     position: relative;
 
     .image {
