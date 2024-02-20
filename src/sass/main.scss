@@ -73,7 +73,7 @@
                 transition: background-color 0.2s ease-in;
 
                 h1 {
-                    color: rgb(7, 7, 7);
+                    color: rgb(0, 0, 0);
 
                 }
 
@@ -152,16 +152,16 @@
                 &.is-active {
                     
                     .bar:nth-child(1) {
-                        background-color: rgb(41, 40, 40);
+                background-color: black;
 
                         transform: translateY(8px) rotate(45deg);
                       }
                     .bar:nth-child(2) {
-                        background-color: rgb(41, 40, 40);
+                        background-color: black;
 
                         opacity: 0; }
                     .bar:nth-child(3) {
-                        background-color: rgb(41, 40, 40);
+                        background-color: black;
 
                         transform: translateY(-6px) rotate(-45deg);
                     }
@@ -230,7 +230,7 @@
                         font-weight: 500;
                         // border: solid;
                         width: 100%;
-                        color: #fff2f8;
+                        color: #000000;
             
                     } //styling for each menulist item
                 }
@@ -255,7 +255,7 @@
             z-index: 19;
             width: 100%;
             transform: translateX(100%);
-            height: 25%;
+            height: 20%;
             transition: transform 0.2s cubic-bezier(0.36, 0.66, 0.04, 1), opacity 0.5s;
 
 
