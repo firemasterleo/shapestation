@@ -122,7 +122,7 @@
 .bodysection {
     height: fit-content;
     overflow: hidden;
-    border: solid;
+    // border: solid;
     width: 100vw;
     position: relative;
 
