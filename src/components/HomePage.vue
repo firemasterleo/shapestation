@@ -392,71 +392,7 @@
 
             }
     }
-    .section3 {
-        width: 100vw; /* Adjust width as needed */
-  height: 60rem; /* Adjust height as needed */
-  background-color: #333; /* Adjust color */
-  clip-path: polygon(200% 0%, 100% 0%, 100% 100%, -1000% 100%); 
 
-    }
-
-    .section4 {
-        border: solid green;
-        display: flex;
-
-
-        .veil {
-            position: relative;
-            z-index: 100;
-            border: green;
-            background-color: #000000;
-        }
-
-        .leftsection {
-            position: relative;
-            padding-top: 10rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            width: 39vw;
-            border: solid rgb(50, 50, 255);
-            
-
-            .top {
-                position: relative;
-                left: 6.6rem;
-                margin: -3rem;
-                color: rgba(192, 192, 192, 0.064);
-
-
-            }
-
-            .bottom {
-                position: relative;
-                // top: 5.3rem;
-                left: 4.4rem;
-                // border: solid;
-
-                // color: rgba(192, 192, 192, 0.114);
-            }
-        }
-        .rightsection {
-            width: 58.8vw;
-            height: 90vh;
-            border: solid red;
-
-
-            .image {
-                width: 100%;
-
-                object-fit: cover;
-                img {
-                    width: 100%;
-                }
-            }
-        }
-
-    }
  }
 
 </style>
