@@ -64,13 +64,14 @@
     
             align-items: center;
             justify-content: space-between;
-            background-color: rgba(10, 10, 10, 0.993);
+            background-color: rgb(14, 13, 13);
             transition: all 0.25s ease-in;
             transition: background-color 0s ease-in;
 
             &.is-expanded {
-                background-color: #ffffff00;
-                transition: background-color 0.2s ease-in;
+                background-color: rgb(160, 160, 140);
+                transition: opacity 0s ease-in;
+                border-bottom: solid rgba(0, 0, 0, 0.331);
 
                 h1 {
                     color: rgb(0, 0, 0);
@@ -98,14 +99,11 @@
     
             }
             .name {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                // width: 6rem;
+
                 height: auto;
-                // border: solid white;
                 font-size: 10px;
                 letter-spacing: 0.2rem;
+
     
     
     
@@ -199,7 +197,7 @@
             gap: 1.2rem;
             overflow-y: hidden;
             z-index: 19;
-            transition: transform 0.2s cubic-bezier(0.36, 0.66, 0.04, 1), opacity 0.5s;
+            transition: transform 0.4s cubic-bezier(0.36, 0.66, 0.04, 1), opacity 0.5s;
     
             &.is-expanded {
                 transition: transform 0.4s cubic-bezier(0.36, 0.66, 0.04, 1);
@@ -256,12 +254,12 @@
             width: 100%;
             transform: translateX(100%);
             height: 20%;
-            transition: transform 0.2s cubic-bezier(0.36, 0.66, 0.04, 1), opacity 0.5s;
+            transition: transform 0.5s cubic-bezier(0.36, 0.66, 0.04, 1), opacity 0.5s;
 
 
 
             &.is-expanded {
-                transition: transform 0.4s cubic-bezier(0.36, 0.66, 0.04, 1);
+                transition: transform 0.5s cubic-bezier(0.36, 0.66, 0.04, 1);
                 overflow-y: auto;
                 transform: translateX(0%);
                 opacity: 1;
