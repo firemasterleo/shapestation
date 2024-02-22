@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import TextSlideUp from '../components/TextSlideUp.vue';
 import HomePage from '../components/HomePage.vue';
 import InteriorPage from '../components/InteriorPage.vue';
+import WardrobeKing from '../components/WardrobeKing.vue';
 
 
 
@@ -19,6 +20,12 @@ const router = createRouter({
             path: '/InteriorPage',
             name: 'InteriorPage',
             component: InteriorPage
+
+        },
+        {
+            path: '/WardrobeKing',
+            name: 'WardrobeKing',
+            component: WardrobeKing
 
         },
         {

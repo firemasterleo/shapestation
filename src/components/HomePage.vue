@@ -101,6 +101,22 @@
         </div>
 
         </div>
+<!-- 
+        <div class="section4">
+      <div class="number-container" ref="number">0</div>
+      <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>
+        </div>
+        <div class="section5">
+
+      <div class="number-container" ref="number2">0</div>
+      <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>
+
+        </div>
+        <div class="section6">
+      <div class="number-container" ref="number3">0</div>
+      <svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24' fill='#000000' width='24' height='24'><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path></svg>
+
+        </div> -->
         <!-- <div class="section3">
         </div> -->
         
@@ -393,6 +409,23 @@
 
             }
     }
+    .section4 {
+        background-color: white;
+        display: flex;
+    }
+    .section5 {
+        background-color: white;
+        display: flex;
+        svg {
+            
+        }
+
+    }
+    .section6 {
+        background-color: white;
+        display: flex;
+
+    }
 
  }
 
@@ -413,7 +446,6 @@ const is_portfolioexpanded = ref(false)
 const TogglePortfolio = () => {
     is_portfolioexpanded.value = !is_portfolioexpanded.value;
 }
-
 
 
 const first = ref(null);
@@ -500,7 +532,7 @@ onMounted(() => {
     // markers: true,
     animation: tl,
     onEnterBack: () => tl.play(), 
-    onLeave: () => tl.pause(), 
+    onLeave: () => tl.pause(),
     onEnter: () => tl.play(),
   });
 
@@ -634,6 +666,54 @@ window.addEventListener('scroll', handleScroll);
 onUnmounted(() => {
 window.removeEventListener('scroll', handleScroll);
 });
+
+
+
+// const animateNumber = (target, endValue, duration) => {
+//   gsap.to(target, {
+//     duration: 3,
+//     textContent: endValue,
+//     snap: 'textContent' // Ensures smooth transition for numbers
+//   });
+// };
+
+// // Set the target element and end value using ref
+// const number = ref(null);
+// const number2 = ref(null);
+// const number3 = ref(null);
+// const endValue = 50; // Set your desired end value
+// const endValue2 = 10; // Set your desired end value
+// const endValue3 = 1000; // Set your desired end value
+
+// onMounted(() => {
+//   gsap.registerPlugin(ScrollTrigger);
+
+//   // Trigger the animation when the section comes into view
+//   ScrollTrigger.create({
+//     trigger: number.value,
+//     start: 'top center', // Adjust as needed
+//     end: 'bottom center', 
+//         markers: true,
+//         scrub:true, // Adjust as needed
+//     onEnter: () => animateNumber(number.value, endValue, 1) // Adjust duration as needed
+//   });
+//   ScrollTrigger.create({
+//     trigger: number2.value,
+//     start: 'top center', // Adjust as needed
+//     end: 'bottom center', 
+//         markers: true,
+//         scrub:true, // Adjust as needed
+//     onEnter: () => animateNumber(number2.value, endValue2, 1) // Adjust duration as needed
+//   });
+//   ScrollTrigger.create({
+//     trigger: number3.value,
+//     start: 'top center', // Adjust as needed
+//     end: 'bottom center', 
+//         markers: true,
+//         scrub:true, // Adjust as needed
+//     onEnter: () => animateNumber(number3.value, endValue3, 1) // Adjust duration as needed
+//   });
+// });
 
 
 

@@ -39,6 +39,12 @@
               <h3>IntetiorPage</h3>
             </router-link>
           </div>
+
+          <div class="wardrobeking">
+            <router-link class="menuitem" to="/WardrobeKing" @click="ToggleMenu">
+              <h3>WardrobeKing</h3>
+            </router-link>
+          </div>
   
   </div>
   
