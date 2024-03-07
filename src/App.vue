@@ -24,12 +24,13 @@
 
     
     </div>
-    <div class="menuslide">
+    <div class="menuslide" :class="{ 'is-expanded': is_expanded }">
 
       <div class="topmenuslide" :class="{ 'is-expanded': is_expanded }">
   
         <div class="home" >
             <router-link class="menuitem" to="/" @click="ToggleMenu">
+              
               <h3>Home</h3>
             </router-link>
          </div>
