@@ -77,7 +77,7 @@
         <div class="backgroundvideosection">
             <div class="video">
                 <video autoplay loop muted>
-                    <source src="../assets/spinningworld.mp4" type="video/mp4">
+                    <source src="../assets/spinningworld.mp4" type="video/mp4"/>
                 </video>
 
             </div>
@@ -359,6 +359,7 @@
             border: solid red;
 
             video {
+                
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
