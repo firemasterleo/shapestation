@@ -76,7 +76,9 @@
         </div>
         <div class="backgroundvideosection">
             <div class="video">
-                <video src="../assets/spinningworld.mp4" autoplay muted loop></video>
+                <video autoplay loop muted>
+                    <source src="../assets/spinningworld.mp4" type="video/mp4">
+                </video>
 
             </div>
             <div class="veil">
