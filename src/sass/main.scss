@@ -68,17 +68,17 @@
             transition: all 0.25s ease-in;
             transition: background-color 0s ease-in;
 
-            &.is-expanded {
-                background-color: rgb(160, 160, 140);
-                transition: opacity 0s ease-in;
-                border-bottom: solid rgba(0, 0, 0, 0.331);
+            // &.is-expanded {
+            //     background-color: rgb(160, 160, 140);
+            //     transition: opacity 0s ease-in;
+            //     border-bottom: solid rgba(0, 0, 0, 0.331);
 
-                h1 {
-                    color: rgb(0, 0, 0);
+            //     h1 {
+            //         color: rgb(0, 0, 0);
 
-                }
+            //     }
 
-            }
+            // }
     
             .logo {
                 display: flex;

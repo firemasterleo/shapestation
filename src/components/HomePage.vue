@@ -2,10 +2,16 @@
 <template>
     
 <div class="bodysection">
+
+    <div class="imageveil"></div>
+    <div class="lightveil"></div>
+    <div class="lightveil2"></div>
+    <div class="lightveil3"></div>
+    <div class="lightveil4"></div>
     
     <div class="image">
 
-        <img src="../assets/shapestationimage6.jpg" alt="">
+        <img src="../assets/lightbulb.jpg" alt="">
     </div>
     <div class="herosection">
 
@@ -21,13 +27,14 @@
                 <h1 ref="fourth">Brand</h1>
                 <h1 ref="fifth">Development</h1>
             </div>
-            <p>Our mission is simple: <br> To empower businesses with the necessary digital assets required to thrive in an ever-evolving digital landscape.</p>
+            <!-- <p>Our mission is simple: <br> To empower businesses with the necessary digital assets required to thrive in an ever-evolving digital landscape.</p> -->
             <div class="buttons">
-                <button class="button">About us</button>
-                <button class="button">Our Services</button>                
+                <button class="button">Portfolio</button>
+                <button class="button">Company</button>                
             </div>
+
         </div>
-        <div class="herosliders">
+        <!-- <div class="herosliders">
 
             <div class="slider1">
                 <div class="innerslider">
@@ -70,7 +77,7 @@
 
 
 
-        </div>
+        </div> -->
 
     </div>
     <div class="section2">
@@ -142,17 +149,72 @@
     width: 100vw;
     position: relative;
 
+    .lightveil {
+        // border: solid green ;
+        width: 0.6rem;
+        height: 9rem;
+        position: absolute;
+        top: 18rem;
+        left: 11.1rem;
+        background-color: rgba(0, 0, 0, 0.71);
+        rotate: 13.5deg;
+    }
+    .lightveil2 {
+        width: 0.6rem;
+        height: 9rem;
+        position: absolute;
+        top: 18rem;
+        left: 12.1rem;
+        background-color: rgba(0, 0, 0, 0.71);
+        rotate: 12deg;
+    }
+    .lightveil3 {
+        // border: solid green ;
+        width: 0.6rem;
+        height: 9rem;
+        position: absolute;
+        top: 18rem;
+        left: 14.1rem;
+        background-color: rgba(0, 0, 0, 0.71);
+        rotate: -4.5deg;
+    }
+    .lightveil4 {
+        // border: solid green ;
+        width: 0.6rem;
+        height: 9rem;
+        position: absolute;
+        top: 18rem;
+        left: 15.4rem;
+        background-color: rgba(0, 0, 0, 0.71);
+        rotate: -10deg;
+
+    }
+
+    .imageveil {
+        // border: solid green;
+        position: absolute;
+        width: 100%;
+        height: 35rem;
+        top: 10rem;
+        background-color: rgba(0, 0, 0, 0.208);
+    }
+
 
     .image {
-        height: 45rem;
+        margin-top: 10rem;
+        height: 35rem;
         width: 100%;
         position: absolute;
         z-index: -1;
+
         // border: solid green;
+        display: flex;
+        justify-content: center;
 
         img {
             height: 100%;
-            width: 100%;
+            width: 80%;
+            object-fit: cover;
         }
 
 
@@ -205,6 +267,7 @@
             }
             .buttons {
                 display: flex;
+                gap: 2rem;
                 .button {
                     width: 9rem;
                     font-size: 20px;
@@ -377,7 +440,7 @@
     }
     .section2 {
         padding-inline: 1.2rem;
-        background-color: rgb(32, 31, 31);
+        background-color: rgb(143, 103, 28);
         height: 40rem;
         display: flex;
         flex-direction: column;
@@ -477,11 +540,11 @@ const shapestation = ref(null);
 
 
 onMounted(() => {
-  const tl = gsap.timeline({ defaults: { duration: 0.5, ease: 'power.in()' } });
+  const tl = gsap.timeline({ defaults: { duration: 0.75, ease: 'power.in()' } });
   const tl2 = gsap.timeline({ defaults: { duration: 0.4, ease: 'power.in()' } });
   const tl3 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
   const tl4 = gsap.timeline({ defaults: { duration: 5, ease: 'power.in()' } });
-  const tl5 = gsap.timeline({ defaults: { duration: 0.6, ease: 'power.in()' } });
+  const tl5 = gsap.timeline({ defaults: { duration: 0.75, ease: 'power.in()' } });
 
   tl.from(first.value, { y: 80, delay: 0.06 });
   tl.from(second.value, { y: 80, delay: 0.09 }, '<'); // Add the second animation to start immediately after the first one
@@ -522,7 +585,7 @@ onMounted(() => {
   tl4.to(wind4.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
 
 
-  tl5.from(about.value, { y: 80, delay: 0.05 }, );
+  tl5.from(about.value, { y: 80, delay: 0.75 }, );
   tl5.from(shapestation.value, { y: 80, delay: 0.2 },'<'); // Add the second animation to start immediately after the first one
 
   ScrollTrigger.create({
