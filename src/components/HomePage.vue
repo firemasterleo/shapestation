@@ -29,8 +29,8 @@
             </div>
             <!-- <p>Our mission is simple: <br> To empower businesses with the necessary digital assets required to thrive in an ever-evolving digital landscape.</p> -->
             <div class="buttons">
-                <button class="button">Portfolio</button>
-                <button class="button">Company</button>                
+                <button class="button" ref="button1">Portfolio</button>
+                <button class="button" ref="button2">Company</button>                
             </div>
 
         </div>
@@ -276,10 +276,11 @@
                 color: rgb(202, 196, 196);
             }
             .buttons {
-                margin-top: 28rem;
+                margin-top: 27rem;
                 display: flex;
                 gap: 3rem;
                 .button {
+                    opacity: 1;
                     width: 9rem;
                     font-size: 20px;
                     font-weight: 700;
@@ -534,7 +535,8 @@ const lightveil2 = ref(null);
 const lightveil3 = ref(null);
 const lightveil4 = ref(null);
 
-
+const button1 = ref(null);
+const button2 = ref(null);
 
 
 
@@ -547,13 +549,19 @@ const shapestation = ref(null);
 onMounted(() => {
   const tl = gsap.timeline({ defaults: { duration: 0.75, ease: 'power.in()' } });
   const tl2 = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: -1, defaults: { duration: 3, ease: 'power.in()', delay: 1 } });
+  const tl3 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
   const tl5 = gsap.timeline({ defaults: { duration: 0.75, ease: 'power.in()' } });
+  
 
   tl.from(first.value, { y: 80, delay: 0.06 }), '<';
   tl.from(second.value, { y: 80, delay: 0.09 }, '<'); // Add the second animation to start immediately after the first one
   tl.from(third.value, { y: 80, delay: 0.1 }, '<'); // Add the third animation to start immediately after the second one
   tl.from(fourth.value, { y: 80, delay: 0.1 }, '<'); // Add the third animation to start immediately after the second one
   tl.from(fifth.value, { y: 80, delay: 0.2 }, '<'); // Add the third animation to start immediately after the second one
+
+
+  tl3.from([button1.value, button2.value], { opacity: 0, delay: 0.2 }); // Add the third animation to start immediately after the second one
+
 
 
 tl2.to([lightveil1.value, lightveil2.value, lightveil3.value, lightveil4.value], { opacity: 0 }); // Change opacity to 0
@@ -585,6 +593,16 @@ tl2.to([lightveil1.value, lightveil2.value, lightveil3.value, lightveil4.value],
     onEnterBack: () => tl2.play(), 
     onLeave: () => tl2.reverse(), 
     onEnter: () => tl2.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: button1.value,
+    start: 'top 100%',
+    end: 'bottom 40%',
+    // markers: true,
+    
+    animation: tl3,
+
   });
   
 
