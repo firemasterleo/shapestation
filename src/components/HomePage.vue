@@ -285,13 +285,13 @@
                     font-size: 20px;
                     font-weight: 700;
                     padding: 0.4rem;
-                    border-color: rgba(255, 255, 255, 0.326);
-                    border-top-color: rgba(90, 99, 87, 0.42) ;
-                    border-bottom-color: rgba(244, 196, 83, 0.468) ;
-                    border-left-color: rgb(73, 82, 73);
-                    border-bottom-color: rgba(244, 196, 83, 0.468) ;
+                    border-color: rgba(0, 0, 0, 0.326);
+                    // border-top-color: rgba(90, 99, 87, 0.42) ;
+                    // border-bottom-color: rgba(244, 196, 83, 0.468) ;
+                    // border-left-color: rgb(73, 82, 73);
+                    // border-bottom-color: rgba(0, 0, 0, 0.468) ;
                     margin-left: 0.6rem;
-                    background-color: rgba(105, 109, 100, 0.185);
+                    background-color: rgba(244, 196, 83, 0.306);
                     border-radius: 2rem;
                     color: rgb(202, 196, 196);
                     font-weight: bolder;
@@ -452,7 +452,7 @@
     }
     .section2 {
         padding-inline: 1.2rem;
-        background-color: rgb(130, 98, 29);
+        background-color: rgba(130, 98, 29, 0.299);
         height: 40rem;
         display: flex;
         flex-direction: column;
