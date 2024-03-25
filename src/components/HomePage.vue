@@ -4,10 +4,10 @@
 <div class="bodysection">
 
     <div class="imageveil"></div>
-    <div class="lightveil"></div>
-    <div class="lightveil2"></div>
-    <div class="lightveil3"></div>
-    <div class="lightveil4"></div>
+    <div class="lightveil1" ref="lightveil1"></div>
+    <div class="lightveil2" ref="lightveil2"></div>
+    <div class="lightveil3" ref="lightveil3"></div>
+    <div class="lightveil4" ref="lightveil4"></div>
     
     <div class="image">
 
@@ -149,44 +149,52 @@
     width: 100vw;
     position: relative;
 
-    .lightveil {
+    .lightveil1 {
         // border: solid green ;
-        width: 0.6rem;
-        height: 9rem;
+        width: 0.48rem;
+        border-radius: 0.5rem;
+        height: 7.7rem;
         position: absolute;
-        top: 18rem;
-        left: 11.1rem;
+        top: 15.1rem;
+        left: 11.4rem;
         background-color: rgba(0, 0, 0, 0.71);
-        rotate: 13.5deg;
+        rotate: 13deg;
     }
     .lightveil2 {
-        width: 0.6rem;
-        height: 9rem;
+        border-radius: 0.5rem;
+
+        width: 0.37rem;
+        height: 7.57rem;
         position: absolute;
-        top: 18rem;
-        left: 12.1rem;
+        top: 15.3rem;
+        left: 12.32rem;
         background-color: rgba(0, 0, 0, 0.71);
-        rotate: 12deg;
+        rotate: 10.5deg;
     }
     .lightveil3 {
         // border: solid green ;
-        width: 0.6rem;
-        height: 9rem;
+        width: 0.4rem;
+        border-radius: 0.5rem;
+
+        
+        height: 7.8rem;
         position: absolute;
-        top: 18rem;
-        left: 14.1rem;
+        top: 15.3rem;
+        left: 14.6rem;
         background-color: rgba(0, 0, 0, 0.71);
-        rotate: -4.5deg;
+        rotate: -3deg;
     }
     .lightveil4 {
         // border: solid green ;
-        width: 0.6rem;
+        border-radius: 0.5rem;
+
+        width: 0.42rem;
         height: 9rem;
         position: absolute;
-        top: 18rem;
-        left: 15.4rem;
+        top: 15.2rem;
+        left: 16.1rem;
         background-color: rgba(0, 0, 0, 0.71);
-        rotate: -10deg;
+        rotate: -9deg;
 
     }
 
@@ -196,12 +204,14 @@
         width: 100%;
         height: 35rem;
         top: 10rem;
-        background-color: rgba(0, 0, 0, 0.208);
+        // background-color: rgba(0, 0, 0, 0.379);
     }
 
 
     .image {
-        margin-top: 10rem;
+        // border: solid red;
+        margin-top: 6rem;
+        margin-left: 0.4rem;
         height: 35rem;
         width: 100%;
         position: absolute;
@@ -222,7 +232,7 @@
     
     
     .herosection {
-        // border: solid;
+        border: solid green;
         background-color: rgba(0, 0, 0, 0);
         height: 45rem;
         padding-left: 1.5rem;
@@ -266,8 +276,9 @@
                 color: rgb(202, 196, 196);
             }
             .buttons {
+                margin-top: 28rem;
                 display: flex;
-                gap: 2rem;
+                gap: 3rem;
                 .button {
                     width: 9rem;
                     font-size: 20px;
@@ -518,20 +529,14 @@ const fourth = ref(null);
 const fifth = ref(null);
 
 
-const html5 = ref(null);
-const java = ref(null);
-const netlify = ref(null);
-const vuejs = ref(null);
-const coding = ref(null);
-const css3 = ref(null);
-const git = ref(null);
+const lightveil1 = ref(null);
+const lightveil2 = ref(null);
+const lightveil3 = ref(null);
+const lightveil4 = ref(null);
 
 
-const svg = ref(null);
-const wind1 = ref(null);
-const wind2 = ref(null);
-const wind3 = ref(null);
-const wind4 = ref(null);
+
+
 
 
 const about = ref(null);
@@ -541,48 +546,20 @@ const shapestation = ref(null);
 
 onMounted(() => {
   const tl = gsap.timeline({ defaults: { duration: 0.75, ease: 'power.in()' } });
-  const tl2 = gsap.timeline({ defaults: { duration: 0.4, ease: 'power.in()' } });
-  const tl3 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
-  const tl4 = gsap.timeline({ defaults: { duration: 5, ease: 'power.in()' } });
+  const tl2 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
   const tl5 = gsap.timeline({ defaults: { duration: 0.75, ease: 'power.in()' } });
 
-  tl.from(first.value, { y: 80, delay: 0.06 });
+  tl.from(first.value, { y: 80, delay: 0.06 }), '<';
   tl.from(second.value, { y: 80, delay: 0.09 }, '<'); // Add the second animation to start immediately after the first one
   tl.from(third.value, { y: 80, delay: 0.1 }, '<'); // Add the third animation to start immediately after the second one
   tl.from(fourth.value, { y: 80, delay: 0.1 }, '<'); // Add the third animation to start immediately after the second one
   tl.from(fifth.value, { y: 80, delay: 0.2 }, '<'); // Add the third animation to start immediately after the second one
 
 
-  tl2.from(css3.value, { y: 40, delay: 0.2 }, '<'); // Add the second animation to start immediately after the first one
-  tl2.from(java.value, { y: 40, delay: 0.1 }, '<'); // Add the third animation to start immediately after the second one
-  tl2.from(netlify.value, { y: 40, delay: 0.15 }, '<'); // Add the third animation to start immediately after the second one
-  tl2.from(vuejs.value, { y: 40, delay: 0.2 }, '<'); // Add the third animation to start immediately after the second one
-  tl2.from(html5.value, { y: 40, delay: 0.25 }, '<'); // Add the third animation to start immediately after the second one
-  tl2.from(coding.value, { y: 40, delay: 0.3 }, '<'); // Add the third animation to start immediately after the second one
-  tl2.from(git.value, { y: 40, delay: 0.35 }, '<'); // Add the third animation to start immediately after the second one
-
-
-
-  tl3.to(svg.value, { rotation: -57, delay: 0, duration: 0.5}); // Add the second animation to start immediately after the first one
-  tl3.to(svg.value, { rotation: -39, delay: 0, duration: 0.5}); // Add the second animation to start immediately after the first one
-  tl3.to(svg.value, { rotation: -57, delay: 0, duration: 0.5}); // Add the second animation to start immediately after the first one
-  tl3.to(svg.value, { rotation: -39, delay: 0, duration: 0.5}); // Add the second animation to start immediately after the first one
-  
-  tl3.to(svg.value, { rotation: -57, delay: 0, duration: 0.1}); // Add the second animation to start immediately after the first one
-  tl3.to(svg.value, { rotation: -39, delay: 0, duration: 0.1}); // Add the second animation to start immediately after the first one
-  tl3.to(svg.value, { rotation: -57, delay: 0, duration: 0.1}); // Add the second animation to start immediately after the first one
-  tl3.to(svg.value, { rotation: -39, delay: 0, duration: 0.1}); // Add the second animation to start immediately after the first one
-
-  tl3.to(svg.value, { rotation: -45, delay: 0, duration: 0.3}); // Add the second animation to start immediately after the first one
-  
-  tl3.to(svg.value, { y: -210, delay: 0}, '<'); // Add the second animation to start immediately after the first one
-
-
-
-  tl4.to(wind1.value, { x: 450, delay: 1}, '<'); // Add the third animation to start immediately after the second one
-  tl4.to(wind2.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
-  tl4.to(wind3.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
-  tl4.to(wind4.value, { x: 450, delay: 0 }, '<'); // Add the third animation to start immediately after the second one
+  tl2.to(lightveil1.value, { opacity: 0, }); // Change opacity smoothly
+  tl2.to(lightveil2.value, { opacity: 0, }, '<'); // Change opacity smoothly after the previous animation
+  tl2.to(lightveil3.value, { opacity: 0, }, '<'); // Change opacity smoothly after the previous animation
+  tl2.to(lightveil4.value, { opacity: 0, }, '<'); // Change opacity smoothly after the previous animation
 
 
   tl5.from(about.value, { y: 80, delay: 0.75 }, );
@@ -602,43 +579,17 @@ onMounted(() => {
 
 
   ScrollTrigger.create({
-    trigger: css3.value,
-    start: '-1000% 60%',
-    end: '1000% 60%',
-    // markers: true,
+    trigger: lightveil1.value,
+    start: 'top 100%',
+    end: 'bottom 40%',
+    markers: true,
     
     animation: tl2,
-    onEnterBack: () => tl2.reverse(), 
-    onLeave: () => tl2.pause(), 
+    onEnterBack: () => tl2.play(), 
+    onLeave: () => tl2.reverse(), 
     onEnter: () => tl2.play(),
   });
   
-  ScrollTrigger.create({
-    trigger: svg.value,
-    start: 'top 70%',
-    end: 'bottom 45%',
-    // markers: true,
-    scrub: 3,
-    animation: tl3,
-    onEnterBack: () => tl3.reverse(), 
-
-  });
-
-  ScrollTrigger.create({
-    trigger: wind1.value,
-    start: '300% 70%',
-    end: '300% 45%',
-    // markers: true,
-    scrub:6,
-    animation: tl4,
-    // onLeave: () => tl4.pause(), 
-
-
-    // onEnterBack: () => tl4.reverse(), 
-
-    
-
-  });
 
   ScrollTrigger.create({
     trigger: about.value,
