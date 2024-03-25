@@ -254,7 +254,7 @@
                 gap: 0.6rem;
                 overflow: hidden;
                 font-size: 19px;
-                color: rgba(255, 255, 255, 0.413);
+                color: rgba(255, 255, 255, 0.626);
 
     
             }
@@ -264,7 +264,7 @@
                 margin-top: -1.2rem;
                 overflow: hidden;
                 font-size: 19px;
-                color: rgba(255, 255, 255, 0.413);
+                color: rgba(255, 255, 255, 0.626);
 
 
 
@@ -293,7 +293,7 @@
                     margin-left: 0.6rem;
                     background-color: rgba(244, 196, 83, 0.306);
                     border-radius: 2rem;
-                    color: rgba(255, 255, 255, 0.413);
+                    color: rgba(255, 255, 255, 0.626);
                     font-weight: bolder;
                     // outline: none;
                 }
