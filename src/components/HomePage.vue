@@ -547,20 +547,20 @@ const shapestation = ref(null);
 
 
 onMounted(() => {
-  const tl = gsap.timeline({ defaults: { duration: 0.75, ease: 'power.in()' } });
+  const tl = gsap.timeline({ defaults: { duration: 0.75, ease: 'power.in()'} });
   const tl2 = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: -1, defaults: { duration: 3, ease: 'power.in()', delay: 1 } });
   const tl3 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
   const tl5 = gsap.timeline({ defaults: { duration: 0.75, ease: 'power.in()' } });
   
 
-  tl.from(first.value, { y: 80, delay: 0.06 }), '<';
+  tl.from(first.value, { y: 80, delay: 1.56 }), '<';
   tl.from(second.value, { y: 80, delay: 0.09 }, '<'); // Add the second animation to start immediately after the first one
   tl.from(third.value, { y: 80, delay: 0.1 }, '<'); // Add the third animation to start immediately after the second one
   tl.from(fourth.value, { y: 80, delay: 0.1 }, '<'); // Add the third animation to start immediately after the second one
   tl.from(fifth.value, { y: 80, delay: 0.2 }, '<'); // Add the third animation to start immediately after the second one
 
 
-  tl3.from([button1.value, button2.value], { opacity: 0, delay: 0.2 }); // Add the third animation to start immediately after the second one
+  tl3.from([button1.value, button2.value], { opacity: 0, delay: 1.7 }); // Add the third animation to start immediately after the second one
 
 
 

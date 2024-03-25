@@ -1,5 +1,8 @@
 <template>
     <LenisScroll/>
+    <div class="firstscreen" ref="firstscreen">
+      <h1>Shapestation</h1>
+    </div>
     <div class="iphone14topspace"></div>
 
     <div class="mainveil" :class="{ 'is-expanded': is_expanded }" @click="ToggleMenu"></div>
@@ -112,7 +115,9 @@
 </style>
 
 <script setup>
-import iScroll from 'iscroll';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 import LenisScroll from './components/LenisScroll.vue';
 
@@ -131,6 +136,32 @@ const is_expanded = ref(false)
 const ToggleMenu = () => {
     is_expanded.value = !is_expanded.value;
 }
+
+const firstscreen = ref(null);
+
+onMounted(() => {
+  const tl = gsap.timeline({ defaults: { duration: 1.2, ease: 'power.in()' } });
+
+  tl.to(firstscreen.value, { y: -1100, delay: 1.2 });
+
+
+
+  ScrollTrigger.create({
+    trigger: firstscreen.value,
+    start: 'top 100%',
+    end: 'bottom 40%',
+    // markers: true,
+    
+    animation: tl,
+
+  });
+  
+
+
+
+
+
+});
 
 
 //headerbehaviour logic
