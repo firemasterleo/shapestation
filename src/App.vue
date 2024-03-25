@@ -140,9 +140,9 @@ const ToggleMenu = () => {
 const firstscreen = ref(null);
 
 onMounted(() => {
-  const tl = gsap.timeline({ defaults: { duration: 1.2, ease: 'power.in()' } });
+  const tl = gsap.timeline({ defaults: { duration: 1, ease: 'power.in()' } });
 
-  tl.to(firstscreen.value, { y: -1100, delay: 1.2 });
+  tl.to(firstscreen.value, { y: -1100, delay: 1 });
 
 
 
