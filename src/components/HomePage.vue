@@ -157,7 +157,7 @@
         position: absolute;
         top: 15.1rem;
         left: 11.4rem;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         rotate: 13deg;
     }
     .lightveil2 {
@@ -168,7 +168,7 @@
         position: absolute;
         top: 15.3rem;
         left: 12.32rem;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         rotate: 10.5deg;
     }
     .lightveil3 {
@@ -181,7 +181,7 @@
         position: absolute;
         top: 15.3rem;
         left: 14.6rem;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         rotate: -3deg;
     }
     .lightveil4 {
@@ -193,7 +193,7 @@
         position: absolute;
         top: 15.2rem;
         left: 16.1rem;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         rotate: -9deg;
 
     }
@@ -564,7 +564,7 @@ onMounted(() => {
 
 
 
-tl2.to([lightveil1.value, lightveil2.value, lightveil3.value, lightveil4.value], { opacity: 0 }); // Change opacity to 0
+tl2.from([lightveil1.value, lightveil2.value, lightveil3.value, lightveil4.value], { opacity: 0.5 }); // Change opacity to 0
 
 
   tl5.from(about.value, { y: 80, delay: 0.75 }, );
