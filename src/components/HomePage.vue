@@ -204,7 +204,7 @@
         width: 100%;
         height: 35rem;
         top: 10rem;
-        // background-color: rgba(0, 0, 0, 0.379);
+        background-color: rgba(0, 0, 0, 0.379);
     }
 
 
@@ -232,7 +232,7 @@
     
     
     .herosection {
-        border: solid green;
+        // border: solid green;
         background-color: rgba(0, 0, 0, 0);
         height: 45rem;
         padding-left: 1.5rem;
@@ -546,7 +546,7 @@ const shapestation = ref(null);
 
 onMounted(() => {
   const tl = gsap.timeline({ defaults: { duration: 0.75, ease: 'power.in()' } });
-  const tl2 = gsap.timeline({ defaults: { duration: 2, ease: 'power.in()' } });
+  const tl2 = gsap.timeline({ defaults: { duration: 3, ease: 'power.in()', delay: 1 } });
   const tl5 = gsap.timeline({ defaults: { duration: 0.75, ease: 'power.in()' } });
 
   tl.from(first.value, { y: 80, delay: 0.06 }), '<';
@@ -556,10 +556,8 @@ onMounted(() => {
   tl.from(fifth.value, { y: 80, delay: 0.2 }, '<'); // Add the third animation to start immediately after the second one
 
 
-  tl2.to(lightveil1.value, { opacity: 0, }); // Change opacity smoothly
-  tl2.to(lightveil2.value, { opacity: 0, }, '<'); // Change opacity smoothly after the previous animation
-  tl2.to(lightveil3.value, { opacity: 0, }, '<'); // Change opacity smoothly after the previous animation
-  tl2.to(lightveil4.value, { opacity: 0, }, '<'); // Change opacity smoothly after the previous animation
+  tl2.to([lightveil1.value, lightveil2.value, lightveil3.value, lightveil4.value], { opacity: 0 }); // Change opacity smoothly for all targets simultaneously
+
 
 
   tl5.from(about.value, { y: 80, delay: 0.75 }, );
@@ -582,7 +580,7 @@ onMounted(() => {
     trigger: lightveil1.value,
     start: 'top 100%',
     end: 'bottom 40%',
-    markers: true,
+    // markers: true,
     
     animation: tl2,
     onEnterBack: () => tl2.play(), 
