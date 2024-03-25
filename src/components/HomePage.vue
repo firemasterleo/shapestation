@@ -286,10 +286,10 @@
                     font-weight: 700;
                     padding: 0.4rem;
                     border-color: rgba(255, 255, 255, 0.326);
-                    border-top-color: rgba(111, 159, 96, 0.42) ;
-                    border-bottom-color: rgba(225, 83, 244, 0.468) ;
+                    border-top-color: rgba(90, 99, 87, 0.42) ;
+                    border-bottom-color: rgba(244, 196, 83, 0.468) ;
                     border-left-color: rgb(73, 82, 73);
-                    border-right-color:rgba(225, 83, 244, 0.468) ;
+                    border-bottom-color: rgba(244, 196, 83, 0.468) ;
                     margin-left: 0.6rem;
                     background-color: rgba(105, 109, 100, 0.185);
                     border-radius: 2rem;
@@ -452,7 +452,7 @@
     }
     .section2 {
         padding-inline: 1.2rem;
-        background-color: rgb(143, 103, 28);
+        background-color: rgb(130, 98, 29);
         height: 40rem;
         display: flex;
         flex-direction: column;
