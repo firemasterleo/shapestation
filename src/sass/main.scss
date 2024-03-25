@@ -22,12 +22,24 @@
         align-items: center;
         position: absolute;
         z-index: 1000;
+        overflow-y: hidden;
 
         // border-bottom-left-radius: 50% 20px; /* Adjust the negative value to control the inward curve */
         // border-bottom-right-radius: 50% 20px;
 
         h1 {
             margin-top: -5rem;
+        }
+        .innerbox {
+            width: 100vw;
+            height: 20rem;
+            position: absolute;
+            top: 93%;
+            background-color: black;
+            border-top-left-radius: 50% 20px;
+            border-top-right-radius: 50% 20px;
+
+
         }
     }
     
