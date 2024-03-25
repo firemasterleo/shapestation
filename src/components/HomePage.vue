@@ -204,7 +204,7 @@
         width: 100%;
         height: 35rem;
         top: 10rem;
-        background-color: rgba(0, 0, 0, 0.379);
+        background-color: rgba(0, 0, 0, 0.861);
     }
 
 
