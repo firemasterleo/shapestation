@@ -1,9 +1,10 @@
 <template>
     <div class="body">
-        <div class="image">
+        <h1>hello</h1>
+        <!-- <div class="image">
 
 <img src="./assets/chessboard.jpg" alt="">
-</div>
+</div> -->
     </div>
 
 </template>
