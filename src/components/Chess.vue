@@ -1,10 +1,10 @@
 <template>
     <div class="body">
-        <h1>hello</h1>
-        <!-- <div class="image">
 
-<img src="./assets/chessboard.jpg" alt="">
-</div> -->
+        <div class="image">
+            <img src="../assets/sketch-4029522_1280.jpg" alt="">
+        </div>
+
     </div>
 
 </template>
@@ -22,8 +22,29 @@
 .body {
     background-color: white;
     height: 100vh;
-    border: solid red;
+    overflow-x: hidden;
+
+
+    .image {
+        margin-top: 4rem;
+        height: auto;
+        width: 45rem;
+        // border: solid blue;
+        
+        img {
+            // rotate: 60deg;
+            // margin-top: -5rem;
+            // position: relative;
+            // left: 10rem;
+            
+            // object-fit: cover;
+            width: 100%;
+            height: auto;
+    
+        }
+    }
 }
+
 
 
 </style>
