@@ -50,6 +50,11 @@
               <h3>WardrobeKing</h3>
             </router-link>
           </div>
+          <div class="Chess">
+            <router-link class="menuitem" to="/Chess" @click="ToggleMenu">
+              <h3>Chess</h3>
+            </router-link>
+          </div>
   
   </div>
   
@@ -74,7 +79,7 @@
 
 
 
-  <div class="footer" >
+  <div class="footer" :class="{ 'is-expanded': is_expanded }">
     <div class="logoandnav">
 
         <div class="logoname">
@@ -203,7 +208,7 @@ const handleScroll = () => {
     isHidingHeader.value = false;
   }
   if (is_expanded.value) {
-    isScrollingUp.value = true; } //i used this code to turn off scrolling of the header when isexpanded condition is true
+    isScrollingUp.value = true; } //i used this code to turn off scrolling of the header when isexpanded condition is true (update, confirm what this line of code does exactly , i cant seem to know )
 
     if (currentScrollTop >= maxScroll - bottomMargin) {
         isHidingHeader.value = false;

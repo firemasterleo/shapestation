@@ -20,7 +20,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        // position: absolute;
+        position: fixed;
+        // bottom: 0;
         z-index: 1000;
         overflow-y: hidden;
 
@@ -181,16 +183,16 @@
                 &.is-active {
                     
                     .bar:nth-child(1) {
-                background-color: black;
+                        background-color: rgb(202, 196, 196);
 
                         transform: translateY(8px) rotate(45deg);
                       }
                     .bar:nth-child(2) {
-                        background-color: black;
+                        background-color: rgb(202, 196, 196);
 
                         opacity: 0; }
                     .bar:nth-child(3) {
-                        background-color: black;
+                        background-color: rgb(202, 196, 196);
 
                         transform: translateY(-6px) rotate(-45deg);
                     }
@@ -322,11 +324,10 @@
 
 
         &.is-expanded {
-            position: fixed;
-            
-
-
-
+            height: 100vh;
+            overflow: hidden;        
+    
+    
         }
     }
 
@@ -346,6 +347,12 @@
         background-color: rgba(10, 10, 10, 0.993);
 
         width: 100vw;
+        &.is-expanded {
+            position: fixed;
+            
+    
+    
+        }
 
         .logoandnav {
             display: flex;

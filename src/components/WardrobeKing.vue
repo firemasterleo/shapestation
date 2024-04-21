@@ -12,7 +12,11 @@
     </div>
                        
         </div>
-        <footer></footer>
+        <footer>
+            <div class="leftsection">
+                
+            </div>
+        </footer>
     </div>
 </template>
 

@@ -3,7 +3,7 @@ import TextSlideUp from '../components/TextSlideUp.vue';
 import HomePage from '../components/HomePage.vue';
 import InteriorPage from '../components/InteriorPage.vue';
 import WardrobeKing from '../components/WardrobeKing.vue';
-
+import Chess from '../components/Chess.vue';
 
 
 const router = createRouter({
@@ -26,6 +26,12 @@ const router = createRouter({
             path: '/WardrobeKing',
             name: 'WardrobeKing',
             component: WardrobeKing
+
+        },
+        {
+            path: '/Chess',
+            name: 'Chess',
+            component: Chess
 
         },
         {
